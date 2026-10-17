@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "videos": [
+    {
+      "id": "stone",
+      "original": "assets/landing-hd-24fps-20261017/stone-4k24.mp4",
+      "size": 172055620,
+      "originalSha256": "80583c5f0f598a19e2448ec4e08f938106721433044a7c6bcfa0bbe53289fd6e",
+      "orderedParts": [
+        {
+          "path": "_media/stone-01.bin",
+          "size": 57351874,
+          "sha256": "6bc04ecbb50fb9590c8a557e7b3d618094f6ddcb57a53288ffd444ab78fd1f65"
+        },
+        {
+          "path": "_media/stone-02.bin",
+          "size": 57351874,
+          "sha256": "379d8da68d1f913df18eb0a04034bff2fb5f5dd82a244d5fc360a8ea48b736ee"
+        },
+        {
+          "path": "_media/stone-03.bin",
+          "size": 57351872,
+          "sha256": "baf62ee9b604a60df7ef4ecd3787c668cbcd31151142ef4dc88f02836e81c898"
+        }
+      ]
+    }
+  ]
+}

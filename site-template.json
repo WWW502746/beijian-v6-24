@@ -1,0 +1,2295 @@
+{
+  "basePath": "/beijian-v6-24/",
+  "revision": "github24fps20261017",
+  "desktop": {
+    "files": [
+      {
+        "url": "/beijian-v6-24/_next/static/chunks/219.a4272c59d806b854.js",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/_next/static/chunks/317-13b68c137f5fa4a6.js",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/_next/static/chunks/374-59df7cb51e7def89.js",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/_next/static/chunks/426-38ea7626fae93d22.js",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/_next/static/chunks/42dabedb-17fafadfecf5543b.js",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/_next/static/chunks/5856c26e-917ed5947b7f1e96.js",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/_next/static/chunks/596-52bb42dc1c60d78f.js",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/_next/static/chunks/802b586d-6c2ce93ea2b9b15d.js",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/_next/static/chunks/918.31d755fef3b775de.js",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/_next/static/chunks/app/lab/glyph-field/page-f3430a8c654285b3.js",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/_next/static/chunks/app/lab/page-fab643428e09898e.js",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/_next/static/chunks/dc94249b-8d9cc957baa14e5a.js",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/_next/static/chunks/f19b96fd-1857e2034b2d2d45.js",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/_next/static/chunks/main-app-77b4984e85ecb837.js",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/_next/static/chunks/polyfills-42372ed130431b0a.js",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/_next/static/chunks/webpack-e1862fbaf769f5b1.js",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/_next/static/css/a575cf611578332a.css",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/app.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/app.js?v=hdpreload20261017b"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/archive-room.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/archive-room.js?v=landscape20261016"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/assets/archive-room/dragon-cutout-v2.png",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/archive-room/floral-cutout-v2.png",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/archive-room/fragment-cutout-v2.png",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/archive-room/head-cutout-v2.png",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/archive-room/stele-cutout-v2.png",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/backgrounds/about-paper.png",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall-1440p24.mp4",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/001.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/002.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/003.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/004.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/005.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/006.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/007.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/008.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/009.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/010.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/011.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/012.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/013.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/014.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/015.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/016.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/017.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/018.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/019.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/020.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/021.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/022.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/023.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/024.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/025.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/026.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/027.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/028.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/029.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/init.mp4",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/hall/manifest.json",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone-4k24.mp4",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/001.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/002.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/003.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/004.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/005.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/006.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/007.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/008.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/009.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/010.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/011.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/012.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/013.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/014.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/015.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/016.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/017.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/018.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/019.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/020.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/021.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/022.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/023.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/024.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/025.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/026.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/027.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/028.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/029.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/030.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/031.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/032.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/033.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/034.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/035.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/036.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/037.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/038.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/039.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/040.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/041.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/042.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/043.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/044.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/045.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/046.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/047.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/048.m4s",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/init.mp4",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-hd-24fps-20261017/stone/manifest.json",
+        "group": "films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-v5/beijian-original.svg",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-v5/fandol-kai.woff2",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-v5/hall.png",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-v5/rubbing-v3.png",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-v5/stone.jpg",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/lettering/approved-titles.png",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/lettering/section-titles.png",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/lettering/work-titles.png",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/dragon/dragon.glb",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/floral/web/floral-00.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/floral/web/floral-01.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/floral/web/floral-02.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/floral/web/floral-03.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/floral/web/floral-04.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/floral/web/floral-05.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/floral/web/floral-06.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/floral/web/floral.gltf",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/fragment/web/fragment-00.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/fragment/web/fragment-01.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/fragment/web/fragment-02.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/fragment/web/fragment-03.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/fragment/web/fragment-04.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/fragment/web/fragment-05.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/fragment/web/fragment-06.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/fragment/web/fragment.gltf",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/head/web/head-00.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/head/web/head-01.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/head/web/head-02.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/head/web/head-03.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/head/web/head-04.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/head/web/head.gltf",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/back-color-v2.png",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/back-normal-v2.png",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/back-roughness-v2.png",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/beilin-stele.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/beilin-stele.gltf",
+        "group": "models",
+        "aliases": [
+          "/beijian-v6-24/assets/models/stele/web/beilin-stele.gltf?v=public1"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/front-color.png",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/front-normal.png",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/front-roughness.png",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/stone-atlas-v3.png",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/stone-normal-v3.png",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/stone-roughness-v3.png",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/coverage.json",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-motion/paper-scene.js",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-motion/three.core.js",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-motion/three.module.js",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/craft-archive-background-v3.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/craft-table-v2.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-antique-closed.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-antique-open.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-antique.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-cicada-closed.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-cicada-open.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-cicada.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-coarse-closed.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-coarse-open.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-coarse.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-cotton-closed.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-cotton-open.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-cotton.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-cracked-closed.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-cracked-open.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-cracked.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-raw-closed.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-raw-open.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-raw.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/review-hall-v2.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/stone-bluestone.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/stone-granite.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/stone-marble.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/stone-sandstone.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/entry-stone.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/fandol-LICENSE.txt",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/fandol-README.txt",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/FandolKai-Regular.woff2",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/liujianmaocao-OFL.txt",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/LiuJianMaoCao-Regular.woff2",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/longcang-OFL.txt",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/LongCang-Regular.woff2",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/mashanzheng-OFL.txt",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/MaShanZheng-Regular.woff2",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/zcoolxiaowei-OFL.txt",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/ZCOOLXiaoWei-Regular.woff2",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/zhimangxing-OFL.txt",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/ZhiMangXing-Regular.woff2",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/historical-personas.json",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/paper-antique.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/paper-cicada.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/paper-coarse.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/paper-cotton.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/paper-cracked.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/paper-raw.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/stone-bluestone.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/stone-granite.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/stone-marble.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/stone-sandstone.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/stone-weathered.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/01.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/02.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/03.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/04.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/05.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/06.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/07.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/08.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/09.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/10.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/11.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/12.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/13.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/14.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/15.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/16.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/01.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/02.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/03.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/04.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/05.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/06.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/07.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/08.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/09.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/10.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/11.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/12.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/13.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/14.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/15.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/16.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/profiles.json",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/scene/craft-table.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/scene/found-hall.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/scene/pick-table.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/scene/result-stone-v1.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/scene/stone-a.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/scene/stone-b.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/scene/stone-c.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/surface-02.png",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/dragon/cover-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/dragon/eye-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/dragon/mane-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/floral/birds-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/floral/cover-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/floral/flower-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/fragment/cover-v2.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/fragment/crown-v2.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/fragment/inscription-v2.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/head/cover-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/head/dragon-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/head/edge-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/stele/cover-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/stele/crest-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/stele/fracture-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/experience.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/experience.css?v=release1"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/experience.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/experience.js?v=landscape20261016"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/glyph-field-embed.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/glyph-field-embed.css?v=2"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/home-film.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/home-film.css?v=v5.3"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/home-film.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/home-film.js?v=hdpreload20261017"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/home-frame-mp4.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/home-frame-mp4.js?v=v5.10"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/home-frame-worker.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/home-frame-worker.js?v=hdpreload20261017"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/home-frames.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/home-frames.js?v=hdpreload20261017"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/home-media.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/home-media.js?v=hdpreload20261017"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/home-mobile.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/home-mobile.js?v=orientationfix20261016"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/icon.svg",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/icon.svg?808137f127e76c75"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/index.html",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/index.txt",
+        "group": "interface"
+      },
+      {
+        "url": "/beijian-v6-24/lab/glyph-field/index.html",
+        "group": "stone-field",
+        "aliases": [
+          "/beijian-v6-24/lab/glyph-field/"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/lettering.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/lettering.js?v=beijian1"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/mobile-layout.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/mobile-layout.css?v=landscape20261016"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/mobile.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/mobile.css?v=landscape20261016"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/models/beijian-imprint.webp",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/models/dragon-stone-lite.glb",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/models/dragon-stone-poster.webp",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/models/jade-seal-top.webp",
+        "group": "stone-field"
+      },
+      {
+        "url": "/beijian-v6-24/name-core.js",
+        "group": "name",
+        "aliases": [
+          "/beijian-v6-24/name-core.js?v=xunzi20261015"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/name-craft.css",
+        "group": "name",
+        "aliases": [
+          "/beijian-v6-24/name-craft.css?v=xunzi20261015"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/name-experience.css",
+        "group": "name",
+        "aliases": [
+          "/beijian-v6-24/name-experience.css?v=xunzi20261015"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/name-experience.js",
+        "group": "name",
+        "aliases": [
+          "/beijian-v6-24/name-experience.js?v=v6result20261015"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/name-finish.js",
+        "group": "name",
+        "aliases": [
+          "/beijian-v6-24/name-finish.js?v=xunzi20261015"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/name-loader.js",
+        "group": "name",
+        "aliases": [
+          "/beijian-v6-24/name-loader.js?v=v6result20261015"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/name-paper-motion.js",
+        "group": "name",
+        "aliases": [
+          "/beijian-v6-24/name-paper-motion.js?v=xunzi20261015"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/name-result-flip.js",
+        "group": "name",
+        "aliases": [
+          "/beijian-v6-24/name-result-flip.js?v=v6result20261015"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/name-result.css",
+        "group": "name",
+        "aliases": [
+          "/beijian-v6-24/name-result.css?v=v6result20261015"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/name-v4.css",
+        "group": "name",
+        "aliases": [
+          "/beijian-v6-24/name-v4.css?v=xunzi20261015"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/preload.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/preload.css?v=hdpreload20261017"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/preload.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/preload.js?v=local24fps20261017"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/stele-editorial.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/stele-editorial.css?v=editorial1"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/stele-viewer.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/stele-viewer.css?v=editorial1"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/stele-viewer.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/stele-viewer.js?v=public1"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/styles.css",
+        "group": "interface"
+      },
+      {
+        "url": "/beijian-v6-24/typography.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/typography.css?v=beijian1"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/vendor/gsap/gsap.min.js",
+        "group": "interface"
+      },
+      {
+        "url": "/beijian-v6-24/vendor/gsap/ScrollTrigger.min.js",
+        "group": "interface"
+      },
+      {
+        "url": "/beijian-v6-24/vendor/lucide.min.js",
+        "group": "interface"
+      },
+      {
+        "url": "/beijian-v6-24/vendor/three/build/three.core.js",
+        "group": "interface"
+      },
+      {
+        "url": "/beijian-v6-24/vendor/three/build/three.module.js",
+        "group": "interface"
+      },
+      {
+        "url": "/beijian-v6-24/vendor/three/examples/jsm/controls/OrbitControls.js",
+        "group": "interface"
+      },
+      {
+        "url": "/beijian-v6-24/vendor/three/examples/jsm/loaders/GLTFLoader.js",
+        "group": "interface"
+      },
+      {
+        "url": "/beijian-v6-24/vendor/three/examples/jsm/utils/BufferGeometryUtils.js",
+        "group": "interface"
+      },
+      {
+        "url": "/beijian-v6-24/works-archive.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/works-archive.css?v=landscape20261016"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/xunzi-embed.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/xunzi-embed.css?v=1"
+        ]
+      }
+    ]
+  },
+  "mobile": {
+    "files": [
+      {
+        "url": "/beijian-v6-24/app.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/app.js?v=hdpreload20261017b"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/archive-room.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/archive-room.js?v=landscape20261016"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/assets/archive-room/dragon-cutout-v2.png",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/archive-room/floral-cutout-v2.png",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/archive-room/fragment-cutout-v2.png",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/archive-room/head-cutout-v2.png",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/archive-room/stele-cutout-v2.png",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/backgrounds/about-paper.png",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-mobile/hall-to-rubbing-v1.mp4",
+        "group": "mobile-films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-mobile/rubbing-to-hall-v1.mp4",
+        "group": "mobile-films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-mobile/rubbing-to-stone-v1.mp4",
+        "group": "mobile-films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-mobile/stone-to-rubbing-v1.mp4",
+        "group": "mobile-films"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-v5/beijian-original.svg",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-v5/fandol-kai.woff2",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-v5/hall.png",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-v5/rubbing-v3.png",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/landing-v5/stone.jpg",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/lettering/approved-titles.png",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/lettering/section-titles.png",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/lettering/work-titles.png",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/dragon/dragon.glb",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/floral/web/floral-00.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/floral/web/floral-01.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/floral/web/floral-02.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/floral/web/floral-03.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/floral/web/floral-04.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/floral/web/floral-05.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/floral/web/floral-06.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/floral/web/floral.gltf",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/fragment/web/fragment-00.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/fragment/web/fragment-01.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/fragment/web/fragment-02.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/fragment/web/fragment-03.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/fragment/web/fragment-04.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/fragment/web/fragment-05.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/fragment/web/fragment-06.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/fragment/web/fragment.gltf",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/head/web/head-00.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/head/web/head-01.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/head/web/head-02.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/head/web/head-03.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/head/web/head-04.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/head/web/head.gltf",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/back-color-v2.png",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/back-normal-v2.png",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/back-roughness-v2.png",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/beilin-stele.bin",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/beilin-stele.gltf",
+        "group": "models",
+        "aliases": [
+          "/beijian-v6-24/assets/models/stele/web/beilin-stele.gltf?v=public1"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/front-color.png",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/front-normal.png",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/front-roughness.png",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/stone-atlas-v3.png",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/stone-normal-v3.png",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/models/stele/web/stone-roughness-v3.png",
+        "group": "models"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/coverage.json",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-motion/paper-scene.js",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-motion/three.core.js",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-motion/three.module.js",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/craft-archive-background-v3.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/craft-table-v2.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-antique-closed.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-antique-open.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-antique.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-cicada-closed.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-cicada-open.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-cicada.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-coarse-closed.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-coarse-open.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-coarse.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-cotton-closed.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-cotton-open.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-cotton.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-cracked-closed.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-cracked-open.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-cracked.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-raw-closed.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-raw-open.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/paper-raw.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/review-hall-v2.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/stone-bluestone.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/stone-granite.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/stone-marble.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/craft-ui/stone-sandstone.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/entry-stone.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/fandol-LICENSE.txt",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/fandol-README.txt",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/FandolKai-Regular.woff2",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/liujianmaocao-OFL.txt",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/LiuJianMaoCao-Regular.woff2",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/longcang-OFL.txt",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/LongCang-Regular.woff2",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/mashanzheng-OFL.txt",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/MaShanZheng-Regular.woff2",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/zcoolxiaowei-OFL.txt",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/ZCOOLXiaoWei-Regular.woff2",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/zhimangxing-OFL.txt",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/fonts/ZhiMangXing-Regular.woff2",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/historical-personas.json",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/paper-antique.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/paper-cicada.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/paper-coarse.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/paper-cotton.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/paper-cracked.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/paper-raw.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/stone-bluestone.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/stone-granite.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/stone-marble.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/stone-sandstone.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/materials/stone-weathered.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/01.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/02.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/03.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/04.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/05.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/06.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/07.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/08.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/09.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/10.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/11.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/12.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/13.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/14.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/15.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/16.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/01.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/02.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/03.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/04.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/05.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/06.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/07.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/08.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/09.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/10.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/11.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/12.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/13.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/14.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/15.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/personas/history/16.webp",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/profiles.json",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/scene/craft-table.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/scene/found-hall.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/scene/pick-table.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/scene/result-stone-v1.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/scene/stone-a.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/scene/stone-b.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/name/scene/stone-c.png",
+        "group": "name"
+      },
+      {
+        "url": "/beijian-v6-24/assets/surface-02.png",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/dragon/cover-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/dragon/eye-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/dragon/mane-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/floral/birds-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/floral/cover-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/floral/flower-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/fragment/cover-v2.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/fragment/crown-v2.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/fragment/inscription-v2.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/head/cover-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/head/dragon-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/head/edge-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/stele/cover-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/stele/crest-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/assets/works/stele/fracture-v1.webp",
+        "group": "works"
+      },
+      {
+        "url": "/beijian-v6-24/experience.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/experience.css?v=release1"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/experience.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/experience.js?v=landscape20261016"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/glyph-field-embed.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/glyph-field-embed.css?v=2"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/home-film.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/home-film.css?v=v5.3"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/home-film.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/home-film.js?v=hdpreload20261017"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/home-frame-mp4.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/home-frame-mp4.js?v=v5.10"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/home-frame-worker.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/home-frame-worker.js?v=hdpreload20261017"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/home-frames.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/home-frames.js?v=hdpreload20261017"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/home-media.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/home-media.js?v=hdpreload20261017"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/home-mobile.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/home-mobile.js?v=orientationfix20261016"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/index.html",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/lettering.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/lettering.js?v=beijian1"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/mobile-layout.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/mobile-layout.css?v=landscape20261016"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/mobile.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/mobile.css?v=landscape20261016"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/name-core.js",
+        "group": "name",
+        "aliases": [
+          "/beijian-v6-24/name-core.js?v=xunzi20261015"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/name-craft.css",
+        "group": "name",
+        "aliases": [
+          "/beijian-v6-24/name-craft.css?v=xunzi20261015"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/name-experience.css",
+        "group": "name",
+        "aliases": [
+          "/beijian-v6-24/name-experience.css?v=xunzi20261015"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/name-experience.js",
+        "group": "name",
+        "aliases": [
+          "/beijian-v6-24/name-experience.js?v=v6result20261015"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/name-finish.js",
+        "group": "name",
+        "aliases": [
+          "/beijian-v6-24/name-finish.js?v=xunzi20261015"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/name-loader.js",
+        "group": "name",
+        "aliases": [
+          "/beijian-v6-24/name-loader.js?v=v6result20261015"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/name-paper-motion.js",
+        "group": "name",
+        "aliases": [
+          "/beijian-v6-24/name-paper-motion.js?v=xunzi20261015"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/name-result-flip.js",
+        "group": "name",
+        "aliases": [
+          "/beijian-v6-24/name-result-flip.js?v=v6result20261015"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/name-result.css",
+        "group": "name",
+        "aliases": [
+          "/beijian-v6-24/name-result.css?v=v6result20261015"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/name-v4.css",
+        "group": "name",
+        "aliases": [
+          "/beijian-v6-24/name-v4.css?v=xunzi20261015"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/preload.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/preload.css?v=hdpreload20261017"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/preload.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/preload.js?v=local24fps20261017"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/stele-editorial.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/stele-editorial.css?v=editorial1"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/stele-viewer.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/stele-viewer.css?v=editorial1"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/stele-viewer.js",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/stele-viewer.js?v=public1"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/styles.css",
+        "group": "interface"
+      },
+      {
+        "url": "/beijian-v6-24/typography.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/typography.css?v=beijian1"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/vendor/gsap/gsap.min.js",
+        "group": "interface"
+      },
+      {
+        "url": "/beijian-v6-24/vendor/gsap/ScrollTrigger.min.js",
+        "group": "interface"
+      },
+      {
+        "url": "/beijian-v6-24/vendor/lucide.min.js",
+        "group": "interface"
+      },
+      {
+        "url": "/beijian-v6-24/vendor/three/build/three.core.js",
+        "group": "interface"
+      },
+      {
+        "url": "/beijian-v6-24/vendor/three/build/three.module.js",
+        "group": "interface"
+      },
+      {
+        "url": "/beijian-v6-24/vendor/three/examples/jsm/controls/OrbitControls.js",
+        "group": "interface"
+      },
+      {
+        "url": "/beijian-v6-24/vendor/three/examples/jsm/loaders/GLTFLoader.js",
+        "group": "interface"
+      },
+      {
+        "url": "/beijian-v6-24/vendor/three/examples/jsm/utils/BufferGeometryUtils.js",
+        "group": "interface"
+      },
+      {
+        "url": "/beijian-v6-24/works-archive.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/works-archive.css?v=landscape20261016"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/xunzi-embed.css",
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/xunzi-embed.css?v=1"
+        ]
+      }
+    ]
+  },
+  "extraFiles": [
+    "preload-worker.js",
+    ".nojekyll",
+    "assets/landing-v5/fandol-LICENSE.txt",
+    "vendor/three/LICENSE",
+    "vendor/lucide-LICENSE"
+  ]
+}
