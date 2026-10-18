@@ -427,31 +427,44 @@ window.prepareExhibition = async () => {
   loadWorksImages();
   const images = [...document.querySelectorAll('.archive-object img')];
   await Promise.all(images.map(image => image.decode().catch(() => { throw new Error('作品图片尚未准备完成，请重试。'); })));
-  if (glyphFieldFrame?.isConnected && !mobileExhibition && !glyphFieldFrame.dataset.loaded) {
-    const ready = new Promise((resolve, reject) => {
-      const timer = setTimeout(() => reject(new Error('展品互动尚未准备完成，请重试。')), 45000);
-      glyphFieldFrame.addEventListener('load', () => { clearTimeout(timer); resolve(); }, {once: true});
-      glyphFieldFrame.addEventListener('error', () => { clearTimeout(timer); reject(new Error('展品互动尚未准备完成，请重试。')); }, {once: true});
-    });
-    glyphFieldFrame.dataset.loaded = 'true';
-    glyphFieldFrame.src = '/beijian-v6-24/lab/glyph-field/';
-    await ready;
-  }
-  if (glyphFieldFrame?.isConnected && !mobileExhibition) {
-    const started = performance.now();
-    await new Promise((resolve, reject) => {
-      function check() {
-        const document = glyphFieldFrame.contentDocument;
-        const fallback = document?.querySelector('.dragon-field__fallback');
-        if (fallback?.getClientRects().length && !fallback.closest('canvas')) { resolve(); return; }
-        const canvas = document?.querySelector('.dragon-field canvas');
-        const gl = canvas?.getContext('webgl2') || canvas?.getContext('webgl');
-        if (gl && gl.getParameter(gl.CURRENT_PROGRAM)) { resolve(); return; }
-        if (performance.now() - started > 45000) { reject(new Error('立体展品尚未准备完成，请重试。')); return; }
-        setTimeout(check, 100);
-      }
-      check();
-    });
+  const started = performance.now();
+  try {
+    if (glyphFieldFrame?.isConnected && !mobileExhibition && !glyphFieldFrame.dataset.loaded) {
+      const ready = new Promise((resolve, reject) => {
+        const finish = error => {
+          clearTimeout(timer);
+          glyphFieldFrame.removeEventListener('load', loaded);
+          glyphFieldFrame.removeEventListener('error', failed);
+          error ? reject(error) : resolve();
+        };
+        const loaded = () => finish();
+        const failed = () => finish(new Error('展品互动尚未准备完成，请重试。'));
+        const timer = setTimeout(failed, 45000);
+        glyphFieldFrame.addEventListener('load', loaded, {once: true});
+        glyphFieldFrame.addEventListener('error', failed, {once: true});
+      });
+      glyphFieldFrame.dataset.loaded = 'true';
+      glyphFieldFrame.src = '/beijian-v6-24/lab/glyph-field/';
+      await ready;
+    }
+    if (glyphFieldFrame?.isConnected && !mobileExhibition) {
+      await new Promise((resolve, reject) => {
+        function check() {
+          const document = glyphFieldFrame.contentDocument;
+          const fallback = document?.querySelector('.dragon-field__fallback');
+          if (fallback?.getClientRects().length && !fallback.closest('canvas')) { resolve(); return; }
+          const canvas = document?.querySelector('.dragon-field canvas');
+          const gl = canvas?.getContext('webgl2') || canvas?.getContext('webgl');
+          if (gl && gl.getParameter(gl.CURRENT_PROGRAM)) { resolve(); return; }
+          if (performance.now() - started > 45000) { reject(new Error('立体展品尚未准备完成，请重试。')); return; }
+          setTimeout(check, 100);
+        }
+        check();
+      });
+    }
+  } catch (error) {
+    if (glyphFieldFrame) delete glyphFieldFrame.dataset.loaded;
+    throw error;
   }
 };
 function startOpening() {

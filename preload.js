@@ -15,13 +15,14 @@
   const status = boot.querySelector('.preparation__status'), enter = boot.querySelector('.preparation__enter'), retry = boot.querySelector('.preparation__retry');
   const main = document.querySelector('main'), header = document.querySelector('.site-header');
   main.inert = header.inert = true;
-  let running = false, manifest, cache, completed = 0, doneFiles = 0, lastPercent = 0, lastDetail = '';
+  let running = false, manifest, cache, previousCaches = [], downloadFailure, completed = 0, doneFiles = 0, lastPercent = 0, lastDetail = '';
   const inflight = new Map();
+  const transfers = new Set();
   const megabytes = value => (value / 1000000).toFixed(1);
   function paint(final = false) {
     const total = manifest?.desktop.bytes || 1;
     const received = completed + [...inflight.values()].reduce((sum, bytes) => sum + bytes, 0);
-    const percent = final ? 100 : Math.min(97, Math.floor(received / total * 97));
+    const percent = final ? 100 : Math.max(lastPercent, Math.min(97, Math.floor(received / total * 97)));
     if (percent !== lastPercent || final) {
       lastPercent = percent; bar.setAttribute('aria-valuenow', String(percent));
       fill.style.transform = `scaleX(${percent / 100})`; number.innerHTML = `${percent}<span>%</span>`;
@@ -46,46 +47,128 @@
       navigator.serviceWorker.addEventListener('controllerchange', check); check();
     });
   }
-  async function fetchContent(url, options) {
-    try { return await fetch(url, options); }
-    catch (error) {
-      if (error.name === 'TypeError') throw new Error('展览内容读取失败，请检查连接后重试。');
-      throw error;
+  function deadline(task, milliseconds, message, abort) {
+    let timer;
+    return Promise.race([task, new Promise((_, reject) => {
+      timer = setTimeout(() => { abort?.(); reject(new Error(message)); }, milliseconds);
+    })]).finally(() => clearTimeout(timer));
+  }
+  function checkResponse(response) {
+    if (response.status === 200 && response.body) return;
+    const error = new Error('有部分内容暂不可用，请稍后继续加载。');
+    error.network = [408, 425, 429].includes(response.status) || response.status >= 500;
+    throw error;
+  }
+  async function reconnect(operation) {
+    let attempt = 0;
+    while (true) {
+      if (downloadFailure) throw downloadFailure;
+      try { return await operation(); }
+      catch (error) {
+        if (downloadFailure) throw downloadFailure;
+        if (!error.network || (error.limit !== undefined && attempt >= error.limit)) throw error;
+        api.state = 'reconnecting'; api.retries = (api.retries || 0) + 1;
+        status.textContent = '连接有些慢，正在自动继续加载';
+        boot.querySelector('.preparation__note').textContent = '已完成的内容会保留，无需刷新页面。';
+        const delay = Math.min(1000 * 2 ** Math.min(attempt++, 4), 15000);
+        await new Promise(resolve => {
+          const online = () => { clearTimeout(timer); window.removeEventListener('online', online); resolve(); };
+          const timer = setTimeout(online, navigator.onLine === false ? 15000 : delay);
+          window.addEventListener('online', online, {once: true});
+        });
+        api.state = 'loading'; status.textContent = '正在载入影片、作品与字形';
+      }
     }
+  }
+  async function readManifest() {
+    return reconnect(async () => {
+      const controller = new AbortController();
+      try {
+        return await deadline((async () => {
+          const response = await fetch('preload-manifest.json', {cache: 'no-store', headers: {'X-Beijian-Preload': '1'}, signal: controller.signal});
+          checkResponse(response); return await response.json();
+        })(), 45000, '展览清单读取较慢，正在重新连接。', () => controller.abort());
+      } catch (error) {
+        if (controller.signal.aborted || ['TypeError', 'AbortError', 'NetworkError'].includes(error.name)) error.network = true;
+        throw error;
+      }
+    });
+  }
+  function assetResponse(body, file, originalHeaders) {
+    const headers = new Headers(originalHeaders);
+    headers.delete('Content-Encoding'); headers.delete('Transfer-Encoding');
+    headers.set('Content-Length', String(file.bytes));
+    headers.set('X-Beijian-SHA256', file.sha256); headers.set('X-Beijian-Bytes', String(file.bytes));
+    return new Response(body, {status: 200, headers});
+  }
+  async function matchesAsset(response, file) {
+    if (response.headers.get('X-Beijian-SHA256') === file.sha256 && response.headers.get('X-Beijian-Bytes') === String(file.bytes)) return true;
+    // Older prepared versions have no fingerprints; verify their bytes before reuse.
+    const data = await response.arrayBuffer();
+    if (data.byteLength !== file.bytes) return false;
+    const hash = [...new Uint8Array(await crypto.subtle.digest('SHA-256', data))].map(value => value.toString(16).padStart(2, '0')).join('');
+    return hash === file.sha256;
+  }
+  async function downloadAsset(file, url) {
+    const controller = new AbortController();
+    transfers.add(controller);
+    let received = 0, timer, saving = false;
+    let rejectStalled;
+    const stalled = new Promise((_, reject) => { rejectStalled = reject; });
+    const watch = () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        const error = new Error(saving ? '浏览器保存内容较慢，请稍后继续。' : '连接有些慢，正在自动继续加载');
+        error.network = true; if (saving) error.limit = 2;
+        rejectStalled(error); controller.abort();
+      }, saving ? 60000 : 45000);
+    };
+    inflight.set(url, 0); api.currentFile = file.url; watch();
+    try {
+      const response = await Promise.race([fetch(url, {cache: 'reload', headers: {'X-Beijian-Preload': '1'}, signal: controller.signal}), stalled]);
+      checkResponse(response);
+      const measured = response.body.pipeThrough(new TransformStream({
+        transform(chunk, output) {
+          received += chunk.byteLength;
+          if (received > file.bytes) throw new Error('内容校验未通过，请稍后继续。');
+          inflight.set(url, received); paint(); watch(); output.enqueue(chunk);
+        },
+        flush() {
+          if (received !== file.bytes) throw new Error('内容校验未通过，请稍后继续。');
+          saving = true; watch();
+        }
+      }), {signal: controller.signal});
+      // One stream goes straight into storage; do not clone the entire HD response.
+      await Promise.race([cache.put(url, assetResponse(measured, file, response.headers)), stalled]);
+    } catch (error) {
+      if (['TypeError', 'AbortError', 'NetworkError'].includes(error.name)) error.network = true;
+      controller.abort(); throw error;
+    } finally { clearTimeout(timer); transfers.delete(controller); inflight.delete(url); paint(); }
   }
   async function storeAsset(file) {
     const url = new URL(file.url, location.href).href;
-    const existing = await cache.match(url);
-    if (new URL(url).origin !== location.origin) throw new Error('展览资源地址异常，请重试。');
-    if (existing) {
-      for (const alias of file.aliases || []) await cache.put(new URL(alias, location.href).href, existing.clone());
-      completed += file.bytes; doneFiles++; paint(); return;
-    }
-    let received = 0;
-    let timer;
-    inflight.set(url, 0);
-    try {
-      const controller = new AbortController();
-      timer = setTimeout(() => controller.abort(), 45000);
-      const response = await fetchContent(url, {cache: 'reload', headers: {'X-Beijian-Preload': '1'}, signal: controller.signal});
-      if (!response.ok || response.status !== 200 || !response.body) throw new Error('有部分内容暂未载入，请重试。');
-      let cacheError;
-      const saved = cache.put(url, response.clone()).catch(error => { cacheError = error; });
-      const reader = response.body.getReader();
-      try {
-        while (true) {
-          const {done, value} = await reader.read();
-          if (done) break;
-          received += value.length; inflight.set(url, Math.min(received, file.bytes)); paint();
-          clearTimeout(timer); timer = setTimeout(() => controller.abort(), 45000);
+    if (new URL(url).origin !== location.origin || !Number.isSafeInteger(file.bytes) || file.bytes <= 0 || !/^[a-f\d]{64}$/.test(file.sha256)) throw new Error('展览资源清单异常，请稍后继续。');
+    await reconnect(async () => {
+      let found = false;
+      for (const source of [cache, ...previousCaches]) {
+        const existing = await source.match(url);
+        if (!existing) continue;
+        let matches = false;
+        try { matches = await deadline(matchesAsset(existing, file), 60000, '正在核对已保存的内容。'); } catch {}
+        if (!matches) { if (source === cache) await cache.delete(url); continue; }
+        if (source !== cache || !existing.headers.has('X-Beijian-SHA256')) {
+          const reusable = await source.match(url);
+          await deadline(cache.put(url, assetResponse(reusable.body, file, reusable.headers)), 60000, '浏览器保存内容较慢，请稍后继续。');
         }
-      } finally { clearTimeout(timer); reader.releaseLock(); }
-      await saved;
-      if (cacheError) throw cacheError;
-      if (received !== file.bytes) { await cache.delete(url); throw new Error('内容校验未通过，请重试加载。'); }
-      for (const alias of file.aliases || []) await cache.put(new URL(alias, location.href).href, (await cache.match(url)).clone());
-      completed += file.bytes; doneFiles++;
-    } finally { clearTimeout(timer); inflight.delete(url); paint(); }
+        found = true; break;
+      }
+      if (!found) await downloadAsset(file, url);
+    });
+    for (const alias of file.aliases || []) {
+      if (new URL(alias, location.href).origin !== location.origin) throw new Error('展览资源地址异常。');
+      await deadline(cache.put(new URL(alias, location.href).href, await cache.match(url)), 60000, '浏览器保存内容较慢，请稍后继续。');
+    }
+    completed += file.bytes; doneFiles++; paint();
   }
   async function useCache(name) {
     const channel = new MessageChannel();
@@ -97,23 +180,26 @@
   }
   async function start() {
     if (running || api.state === 'ready' || api.state === 'entered') return;
-    running = true; api.state = 'loading'; retry.hidden = enter.hidden = true;
-    completed = 0; doneFiles = 0; inflight.clear(); status.textContent = '正在载入影片、作品与字形';
+    running = true; api.state = 'loading'; api.error = null; retry.hidden = enter.hidden = true;
+    completed = 0; doneFiles = 0; downloadFailure = null; inflight.clear(); status.textContent = '正在载入影片、作品与字形';
     try {
       await controlWorker();
-      const response = await fetchContent('preload-manifest.json', {cache: 'no-store', headers: {'X-Beijian-Preload': '1'}});
-      if (!response.ok) throw new Error('展览清单暂未载入，请重试。');
-      manifest = await response.json();
+      manifest = await readManifest();
       if (!/^[a-f\d]{64}$/.test(manifest.cacheVersion) || !manifest.desktop?.files?.length) throw new Error('展览清单暂不可用，请重试。');
       const name = 'beijian-v6-24-ready-' + manifest.cacheVersion;
-      for (const key of await caches.keys()) if (key.startsWith('beijian-v6-24-ready-') && key !== name) await caches.delete(key);
+      const older = (await caches.keys()).filter(key => key.startsWith('beijian-v6-24-ready-') && key !== name);
+      previousCaches = await Promise.all(older.map(key => caches.open(key)));
       cache = await caches.open(name);
       const queue = [...manifest.desktop.files];
       let downloadError;
       async function consume() {
         while (queue.length && !downloadError) {
           const file = queue.shift();
-          try { await storeAsset(file); } catch (error) { downloadError = error; throw error; }
+          try { await storeAsset(file); } catch (error) {
+            downloadError = downloadFailure = error;
+            for (const transfer of transfers) transfer.abort();
+            throw error;
+          }
         }
       }
       const results = await Promise.allSettled([consume(), consume()]);
@@ -121,28 +207,32 @@
       if (failure) throw failure.reason;
       if (doneFiles !== manifest.desktop.files.length) throw new Error('还有内容未准备完成，请重试。');
       await useCache(name);
-      api.state = 'warming'; status.textContent = '下载完成，正在准备影片与展品';
-      await document.fonts.ready;
-      await window.homeFilm?.prepare?.();
-      await window.prepareExhibition?.();
+      api.state = 'warming'; status.textContent = '下载完成，正在准备字形';
+      await deadline(document.fonts.ready, 60000, '字形准备较慢，已保留下载进度，请继续加载。');
+      status.textContent = '下载完成，正在准备影片';
+      await deadline(window.homeFilm?.prepare?.(), 60000, '影片准备较慢，已保留下载进度，请继续加载。');
+      status.textContent = '下载完成，正在准备展品';
+      await deadline(window.prepareExhibition?.(), 60000, '展品准备较慢，已保留下载进度，请继续加载。');
       api.state = 'ready'; status.textContent = '已准备就绪'; paint(true); enter.hidden = false;
       boot.querySelector('.preparation__note').textContent = '所有内容已准备好，开启这次观看。';
       resolveReady(); window.dispatchEvent(new CustomEvent('site:ready'));
+      Promise.allSettled(older.map(key => caches.delete(key)));
     } catch (error) {
       api.state = 'error';
       api.error = {name: error.name, message: error.message};
       console.error('展览准备未完成：', error);
-      status.textContent = error.name === 'QuotaExceededError' ? '设备可用空间不足，请释放空间后重试。' : error.name === 'AbortError' ? '内容读取等待较长，请重试加载。' : error.name === 'TypeError' ? '浏览器未能完成内容准备，请刷新页面重试。' : error.message || '有部分内容暂未载入，请重试。';
+      status.textContent = error.name === 'QuotaExceededError' ? '设备可用空间不足，请释放空间后重试。' : error.name === 'AbortError' ? '内容读取等待较长，请重试加载。' : error.name === 'TypeError' ? '浏览器未能完成内容准备，请继续加载。' : error.message || '有部分内容暂未载入，请重试。';
       if (location.protocol === 'file:') {
         boot.querySelector('.preparation__note').textContent = '先运行同文件夹中的“启动碑林本地预览”，再点击下方按钮。';
         retry.textContent = '打开本地体验';
       }
       retry.hidden = false;
+      if (location.protocol !== 'file:') retry.textContent = '继续加载';
     } finally { running = false; }
   }
   retry.onclick = () => {
     if (location.protocol === 'file:') location.href = 'http://127.0.0.1:4173/?v=local24fps20261017' + location.hash;
-    else location.reload();
+    else start();
   };
   enter.onclick = () => {
     if (api.state !== 'ready') return;

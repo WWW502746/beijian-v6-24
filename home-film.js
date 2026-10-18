@@ -74,6 +74,7 @@
   function prepareClip(clip) {
     if (clip.started || !prepared) return;
     clip.started = true;
+    const generation = clip.generation = (clip.generation || 0) + 1;
     const source = hostedMedia ? clip.video.dataset.hostedSrc : clip.video.dataset.src;
     clip.video.preload = 'auto';
     clip.stream = clip.video.dataset.streamManifest
@@ -83,20 +84,33 @@
       clip.frameTask = window.createScrollFrames(clip.video, clip.stream, {
         getFrame: () => Math.floor(clip.desiredTime * clip.fps),
         onReady(player) {
+          if (clip.generation !== generation) { player.close(); return; }
           if (!warming && (!active || playhead.progress >= .5 || document.hidden)) { player.suspend(); return; }
           clip.ready = true; clip.stream.useFrames?.(true); render();
         },
         onFallback() {
+          if (clip.generation !== generation) return;
           clip.stream.useFrames?.(false);
           clip.ready = clip.video.readyState >= 2; render();
         }
       }).then(player => {
+        if (clip.generation !== generation) { player?.close(); return; }
         if (!player || player.failed) return;
         clip.framePlayer = player;
         if (!warming && (!active || playhead.progress >= .5 || document.hidden)) player.suspend();
         render();
       });
     }
+  }
+  function resetClip(clip) {
+    // A previous attempt may still resolve after the user resumes preparation.
+    clip.generation = (clip.generation || 0) + 1;
+    clip.framePlayer?.close();
+    clip.stream?.close();
+    clip.video.pause();
+    clip.video.removeAttribute('src');
+    clip.video.load();
+    Object.assign(clip, {started: false, ready: false, failed: false, framePlayer: null, frameTask: null, stream: null});
   }
   function goTo(index, behavior = 'smooth') {
     resizeProgress = null;
@@ -109,6 +123,7 @@
       if (!trigger) return;
       prepared = true;
       warming = true;
+      clips.filter(clip => clip.failed || clip.video.error).forEach(resetClip);
       clips.forEach(prepareClip);
       render();
       const started = performance.now();
@@ -125,7 +140,12 @@
           setTimeout(check, 100);
         };
         check();
-      }); } finally { clearTimeout(frameDeadline); warming = false; render(); }
+      }); } catch (error) {
+        clips.forEach(clip => {
+          if (!clip.ready || (clip.framePlayer && !clip.framePlayer.ready && !clip.framePlayer.failed)) clip.failed = true;
+        });
+        throw error;
+      } finally { clearTimeout(frameDeadline); warming = false; render(); }
     },
     get index() { return trigger ? Number(home.dataset.module) || 0 : Math.min(2, Math.round(scrollY / innerHeight)); },
     get progress() { return playhead.progress; },

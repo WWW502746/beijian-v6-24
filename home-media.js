@@ -11,18 +11,32 @@
     let resolveSource, rejectSource;
     const sourceReady = new Promise((resolve, reject) => { resolveSource = resolve; rejectSource = reject; });
     sourceReady.catch(() => {});
+    const manifestRequest = new AbortController();
 
-    function fallback(event) {
+    function close() {
       if (failed) return;
       failed = true;rejectSource(new Error("Packet source unavailable"));
-      event?.stopImmediatePropagation();
       video.removeEventListener('error', fallback, true);
-      video.src = fallbackUrl;
-      video.load();
+      video.removeEventListener('loadeddata', loaded);
+      video.removeEventListener('seeking', pump);
+      video.removeEventListener('seeked', pump);
+      document.removeEventListener('visibilitychange', prefetch);
+      window.removeEventListener('site:page', prefetch);
+      window.removeEventListener('scroll', scrolled);
+      media.removeEventListener('sourceopen', opened);
+      clearTimeout(idleTimer);manifestRequest.abort();
+      try { if (buffer?.updating) buffer.abort(); } catch {}
       URL.revokeObjectURL(objectUrl);
       for (const item of records.values()) item.reject(new DOMException("Stopped packet source", "AbortError"));
       cache.clear();records.clear();for (const packet of packets.values()) packet.controller?.abort();packets.clear();
       for (const controller of rangeRequests) controller.abort();rangeRequests.clear();
+    }
+    function fallback(event) {
+      if (failed) return;
+      event?.stopImmediatePropagation();
+      close();
+      video.src = fallbackUrl;
+      video.load();
     }
     const records = new Map(), packets = new Map(), rangeRequests = new Set();
     const stats = { completed: 0, bytes: 0, packetRequests: 0, urgentRequests: 0, cancels: 0, resumes: 0, readBytes: 0, skippedBytes: 0, maxBackground: 0, cache };
@@ -146,12 +160,14 @@
       const part = manifest.fragments.find(part => part.end > desired - .2 && part.start < desired + .5 && !records.get(part.src)?.done);
       if (part) fetchBytes(part.src, true);
     }
-    video.addEventListener('loadeddata', () => { hadFrame = true;prefetch(); }, { once: true });
+    function loaded() { hadFrame = true;prefetch(); }
+    function scrolled() {
+      lastScroll = performance.now();clearTimeout(idleTimer);prefetch();idleTimer = setTimeout(prefetch, 700);
+    }
+    video.addEventListener('loadeddata', loaded, { once: true });
     document.addEventListener('visibilitychange', prefetch);
     window.addEventListener('site:page', prefetch);
-    window.addEventListener('scroll', () => {
-      lastScroll = performance.now();clearTimeout(idleTimer);prefetch();idleTimer = setTimeout(prefetch, 700);
-    }, { passive: true });
+    window.addEventListener('scroll', scrolled, { passive: true });
     function update(method, ...args) {
       return new Promise((resolve, reject) => {
         const clean = () => ['updateend', 'error', 'abort'].forEach(name => buffer.removeEventListener(name, done));
@@ -229,27 +245,32 @@
     video.addEventListener('error', fallback, true);
     video.addEventListener('seeking', pump);
     video.addEventListener('seeked', pump);
-    media.addEventListener('sourceopen', async () => {
+    async function opened() {
       try {
-        const response = await fetch(base, { cache: 'force-cache', mode: 'same-origin' });
+        const response = await fetch(base, { cache: 'force-cache', mode: 'same-origin', signal: manifestRequest.signal });
         if (!response.ok) throw new Error('Video manifest unavailable');
         manifest = await response.json();
+        if (failed) return;
         if (!manifest.packs) manifest.packs = [manifest.init, ...manifest.fragments].map(part => ({ src: part.src, bytes: part.bytes, parts: [{ ...part, offset: 0 }] }));
         const mime = `video/mp4; codecs="${manifest.codec}"`;
         if (!MediaSource.isTypeSupported(mime) || !(manifest.duration > 0) || !manifest.fragments?.length) throw new Error('Unsupported video manifest');
         buffer = media.addSourceBuffer(mime);
         media.duration = manifest.duration;
         const init = await fetchBytes(manifest.init.src);
+        if (failed) return;
         await update('appendBuffer', init);
+        if (failed) return;
         initialized = true;
         resolveSource({ manifest, init, read(src) { return failed ? Promise.reject(new Error('Packet source unavailable')) : fetchBytes(src); } });
         pump();
         prefetch();
       } catch { fallback(); }
-    }, { once: true });
+    }
+    media.addEventListener('sourceopen', opened, { once: true });
     video.src = objectUrl;
     video.load();
     return {
+      close,
       getSource() { return sourceReady; },
       useFrames(enabled) { framesActive = Boolean(enabled); if (!framesActive || !hadFrame) pump(); prefetch(); },
       ensure(time) { if (!failed && Number.isFinite(time)) { desired = time; if (!framesActive) pump(); prefetch(); } }
