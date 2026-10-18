@@ -66,6 +66,7 @@
       try { return await operation(); }
       catch (error) {
         if (downloadFailure) throw downloadFailure;
+        if (error.name === 'NetworkError' && !error.network) { error.network = true; error.limit = 2; }
         if (!error.network || (error.limit !== undefined && attempt >= error.limit)) throw error;
         api.state = 'reconnecting'; api.retries = (api.retries || 0) + 1;
         status.textContent = '连接有些慢，正在自动继续加载';
@@ -104,10 +105,11 @@
   async function matchesAsset(response, file) {
     if (response.headers.get('X-Beijian-SHA256') === file.sha256 && response.headers.get('X-Beijian-Bytes') === String(file.bytes)) return true;
     // Older prepared versions have no fingerprints; verify their bytes before reuse.
-    const data = await response.arrayBuffer();
-    if (data.byteLength !== file.bytes) return false;
+    const blob = await response.blob();
+    if (blob.size !== file.bytes) return false;
+    const data = await blob.arrayBuffer();
     const hash = [...new Uint8Array(await crypto.subtle.digest('SHA-256', data))].map(value => value.toString(16).padStart(2, '0')).join('');
-    return hash === file.sha256;
+    return hash === file.sha256 ? blob : false;
   }
   async function downloadAsset(file, url) {
     const controller = new AbortController();
@@ -146,6 +148,7 @@
     } finally { clearTimeout(timer); transfers.delete(controller); inflight.delete(url); paint(); }
   }
   async function storeAsset(file) {
+    api.currentFile = file.url;
     const url = new URL(file.url, location.href).href;
     if (new URL(url).origin !== location.origin || !Number.isSafeInteger(file.bytes) || file.bytes <= 0 || !/^[a-f\d]{64}$/.test(file.sha256)) throw new Error('展览资源清单异常，请稍后继续。');
     await reconnect(async () => {
@@ -157,8 +160,10 @@
         try { matches = await deadline(matchesAsset(existing, file), 60000, '正在核对已保存的内容。'); } catch {}
         if (!matches) { if (source === cache) await cache.delete(url); continue; }
         if (source !== cache || !existing.headers.has('X-Beijian-SHA256')) {
-          const reusable = await source.match(url);
-          await deadline(cache.put(url, assetResponse(reusable.body, file, reusable.headers)), 60000, '浏览器保存内容较慢，请稍后继续。');
+          // Rewrapping a large cached response stream fails in some Chromium builds.
+          const body = matches === true ? await deadline(existing.blob(), 60000, '正在核对已保存的内容。') : matches;
+          if (body.size !== file.bytes) throw new Error('已保存内容校验未通过，请继续加载。');
+          await deadline(cache.put(url, assetResponse(body, file, existing.headers)), 60000, '浏览器保存内容较慢，请稍后继续。');
         }
         found = true; break;
       }
@@ -166,7 +171,7 @@
     });
     for (const alias of file.aliases || []) {
       if (new URL(alias, location.href).origin !== location.origin) throw new Error('展览资源地址异常。');
-      await deadline(cache.put(new URL(alias, location.href).href, await cache.match(url)), 60000, '浏览器保存内容较慢，请稍后继续。');
+      await reconnect(async () => deadline(cache.put(new URL(alias, location.href).href, await cache.match(url)), 60000, '浏览器保存内容较慢，请稍后继续。'));
     }
     completed += file.bytes; doneFiles++; paint();
   }
@@ -188,7 +193,7 @@
       if (!/^[a-f\d]{64}$/.test(manifest.cacheVersion) || !manifest.desktop?.files?.length) throw new Error('展览清单暂不可用，请重试。');
       const name = 'beijian-v6-24-ready-' + manifest.cacheVersion;
       const older = (await caches.keys()).filter(key => key.startsWith('beijian-v6-24-ready-') && key !== name);
-      previousCaches = await Promise.all(older.map(key => caches.open(key)));
+      previousCaches = await Promise.all([...older].reverse().map(key => caches.open(key)));
       cache = await caches.open(name);
       const queue = [...manifest.desktop.files];
       let downloadError;
@@ -219,7 +224,7 @@
       Promise.allSettled(older.map(key => caches.delete(key)));
     } catch (error) {
       api.state = 'error';
-      api.error = {name: error.name, message: error.message};
+      api.error = {name: error.name, message: error.message, file: api.currentFile};
       console.error('展览准备未完成：', error);
       status.textContent = error.name === 'QuotaExceededError' ? '设备可用空间不足，请释放空间后重试。' : error.name === 'AbortError' ? '内容读取等待较长，请重试加载。' : error.name === 'TypeError' ? '浏览器未能完成内容准备，请继续加载。' : error.message || '有部分内容暂未载入，请重试。';
       if (location.protocol === 'file:') {

@@ -1,6 +1,6 @@
 {
   "basePath": "/beijian-v6-24/",
-  "revision": "loadresume20261018",
+  "revision": "loadresume20261018b",
   "desktop": {
     "files": [
       {
@@ -1269,7 +1269,7 @@
         "url": "/beijian-v6-24/preload.js",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/preload.js?v=loadresume20261018"
+          "/beijian-v6-24/preload.js?v=loadresume20261018b"
         ]
       },
       {
@@ -2202,7 +2202,7 @@
         "url": "/beijian-v6-24/preload.js",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/preload.js?v=loadresume20261018"
+          "/beijian-v6-24/preload.js?v=loadresume20261018b"
         ]
       },
       {
