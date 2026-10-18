@@ -1,6 +1,6 @@
 {
   "basePath": "/beijian-v6-24/",
-  "revision": "stackcenter20261019",
+  "revision": "stackreadable20261019",
   "desktop": {
     "files": [
       {
@@ -489,7 +489,7 @@
         "url": "/beijian-v6-24/assets/loading-game/game.js",
         "group": "images-fonts",
         "aliases": [
-          "/beijian-v6-24/assets/loading-game/game.js?v=stackcenter20261019"
+          "/beijian-v6-24/assets/loading-game/game.js?v=stackreadable20261019"
         ]
       },
       {
@@ -500,7 +500,7 @@
         "url": "/beijian-v6-24/assets/loading-game/index.html",
         "group": "images-fonts",
         "aliases": [
-          "/beijian-v6-24/assets/loading-game/index.html?v=stackcenter20261019"
+          "/beijian-v6-24/assets/loading-game/index.html?v=stackreadable20261019"
         ]
       },
       {
@@ -523,7 +523,7 @@
         "url": "/beijian-v6-24/assets/loading-game/style.css",
         "group": "images-fonts",
         "aliases": [
-          "/beijian-v6-24/assets/loading-game/style.css?v=stackcenter20261019"
+          "/beijian-v6-24/assets/loading-game/style.css?v=stackreadable20261019"
         ]
       },
       {
@@ -1315,14 +1315,14 @@
         "url": "/beijian-v6-24/preload.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/preload.css?v=stackcenter20261019"
+          "/beijian-v6-24/preload.css?v=stackreadable20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/preload.js",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/preload.js?v=stackcenter20261019"
+          "/beijian-v6-24/preload.js?v=stackreadable20261019"
         ]
       },
       {
@@ -1509,7 +1509,7 @@
         "url": "/beijian-v6-24/assets/loading-game/game.js",
         "group": "images-fonts",
         "aliases": [
-          "/beijian-v6-24/assets/loading-game/game.js?v=stackcenter20261019"
+          "/beijian-v6-24/assets/loading-game/game.js?v=stackreadable20261019"
         ]
       },
       {
@@ -1520,7 +1520,7 @@
         "url": "/beijian-v6-24/assets/loading-game/index.html",
         "group": "images-fonts",
         "aliases": [
-          "/beijian-v6-24/assets/loading-game/index.html?v=stackcenter20261019"
+          "/beijian-v6-24/assets/loading-game/index.html?v=stackreadable20261019"
         ]
       },
       {
@@ -1543,7 +1543,7 @@
         "url": "/beijian-v6-24/assets/loading-game/style.css",
         "group": "images-fonts",
         "aliases": [
-          "/beijian-v6-24/assets/loading-game/style.css?v=stackcenter20261019"
+          "/beijian-v6-24/assets/loading-game/style.css?v=stackreadable20261019"
         ]
       },
       {
@@ -2301,14 +2301,14 @@
         "url": "/beijian-v6-24/preload.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/preload.css?v=stackcenter20261019"
+          "/beijian-v6-24/preload.css?v=stackreadable20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/preload.js",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/preload.js?v=stackcenter20261019"
+          "/beijian-v6-24/preload.js?v=stackreadable20261019"
         ]
       },
       {

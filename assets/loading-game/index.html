@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#0b0c0c">
   <title>碑间 · 叠石成拓</title>
-  <link rel="stylesheet" href="style.css?v=stackcenter20261019">
+  <link rel="stylesheet" href="style.css?v=stackreadable20261019">
 </head>
 <body>
   <div class="courtyard" aria-hidden="true"></div>
@@ -20,13 +20,15 @@
     <section class="play" aria-label="叠石成拓小游戏" data-phase="loading">
       <div class="scoreline"><span><strong id="score">02</strong><small id="score-unit"> / 08 层</small></span><span class="edition"><span id="edition">一 · 碑间</span><i></i><span id="combo" class="combo">连齐 <b id="best">0</b></span></span></div>
       <canvas id="game" width="900" height="760" tabindex="0" aria-describedby="play-guide" aria-label="点击或按空格落下石片。成碑后，按住拖动拓墨，也可按住空格拓墨。">请使用支持画布的浏览器。</canvas>
-      <div class="caption"><span id="hint" role="status" aria-live="polite">石上片刻，纸上千年。</span></div>
-      <div class="result-actions" hidden><button id="save" type="button">保存拓片 <span>↓</span></button><span class="action-divider"></span><button id="next" type="button">下一方 <span>↗</span></button></div>
+      <div class="game-controls">
+        <div class="caption"><span id="hint" role="status" aria-live="polite">石上片刻，纸上千年。</span></div>
+        <div class="result-actions" hidden><button id="save" type="button">保存拓片 <span>↓</span></button><span class="action-divider"></span><button id="next" type="button">下一方 <span>↗</span></button></div>
+      </div>
     </section>
     <footer class="preparation" aria-label="网站加载状态">
       <div class="load-copy"><span id="load-label">正在连接展览进度</span><span id="load-percent">0%</span></div>
       <div id="load-track" class="load-track" role="progressbar" aria-label="网站加载进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-describedby="load-label"><span id="load-fill" aria-hidden="true"></span></div>
-      <div class="load-meta"><span id="load-detail">准备中</span><span>展览加载完成后，即可进入</span></div>
+      <div class="load-meta"><span id="load-detail">准备中</span><span><span class="intro-loading">展览加载完成后，即可进入</span><span class="intro-ready">影片、作品与字形已就绪</span></span></div>
       <p id="load-note" role="status" aria-live="polite"></p>
       <div class="entry-slot">
         <button class="entry-wait" type="button" disabled>展览加载中，请稍候 <span aria-hidden="true">→</span></button>
@@ -41,6 +43,6 @@
   <script src="render-data.js"></script>
   <script src="paper-data.js"></script>
   <script src="feedback.js"></script>
-  <script src="game.js?v=stackcenter20261019"></script>
+  <script src="game.js?v=stackreadable20261019"></script>
 </body>
 </html>

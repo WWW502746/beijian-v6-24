@@ -16,7 +16,7 @@
   const gameFrame = document.createElement('iframe');
   gameFrame.className = 'loading-game-frame';
   gameFrame.title = '等待之间，叠石成拓';
-  const gameURL = new URL('assets/loading-game/index.html?v=stackcenter20261019', location.href);
+  const gameURL = new URL('assets/loading-game/index.html?v=stackreadable20261019', location.href);
   gameFrame.setAttribute('allow', 'autoplay');
   let gameWindow, gameEntered = false;
   function syncGame() {
@@ -25,7 +25,7 @@
     game.setProgress(Number(bar.getAttribute('aria-valuenow')) / 100, api.state === 'ready' ? '展览准备完成' : status.textContent);
     const document = gameWindow.document;
     document.querySelector('#load-detail').textContent = detail.textContent;
-    document.querySelector('#load-note').textContent = api.state === 'error' ? boot.querySelector('.preparation__note').textContent : '';
+    document.querySelector('#load-note').textContent = api.state === 'error' ? '已完成的内容会保留，请继续加载。' : '';
     const resume = document.querySelector('#load-retry');
     resume.hidden = retry.hidden; resume.textContent = retry.textContent;
     if (api.state === 'ready' && document.querySelector('#enter').hidden) game.setReady(() => enter.click());
