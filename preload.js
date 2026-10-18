@@ -16,13 +16,13 @@
   const gameFrame = document.createElement('iframe');
   gameFrame.className = 'loading-game-frame';
   gameFrame.title = '等待之间，叠石成拓';
-  gameFrame.src = 'assets/loading-game/index.html?v=stack20261019';
+  const gameURL = new URL('assets/loading-game/index.html?v=stackui20261019', location.href);
   gameFrame.setAttribute('allow', 'autoplay');
   let gameWindow, gameEntered = false;
   function syncGame() {
     if (!gameWindow || gameEntered) return;
     const game = gameWindow.beijianStack;
-    game.setProgress(Number(bar.getAttribute('aria-valuenow')) / 100, status.textContent);
+    game.setProgress(Number(bar.getAttribute('aria-valuenow')) / 100, api.state === 'ready' ? '展览准备完成' : status.textContent);
     const document = gameWindow.document;
     document.querySelector('#load-detail').textContent = detail.textContent;
     document.querySelector('#load-note').textContent = api.state === 'error' ? boot.querySelector('.preparation__note').textContent : '';
@@ -43,6 +43,13 @@
     gameEntered = true; gameSync.disconnect(); gameFrame.remove(); gameWindow = null;
   }, {once: true});
   boot.append(gameFrame);
+  // Read the current interface even when a previous exhibition cache is active.
+  fetch(gameURL, {cache: 'no-store', headers: {'X-Beijian-Preload': '1'}}).then(response => {
+    if (!response.ok) throw new Error('等待小游戏暂不可用');
+    return response.text();
+  }).then(html => {
+    if (!gameEntered) gameFrame.srcdoc = html.replace('<head>', `<head><base href="${new URL('./', gameURL).href}">`);
+  }).catch(() => gameFrame.remove());
   const main = document.querySelector('main'), header = document.querySelector('.site-header');
   main.inert = header.inert = true;
   let running = false, manifest, cache, previousCaches = [], downloadFailure, completed = 0, doneFiles = 0, lastPercent = 0, lastDetail = '';

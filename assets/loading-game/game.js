@@ -475,7 +475,7 @@
       const n=Number(value);if(!Number.isFinite(n))return;
       const p=clamp(n,0,1);$('load-fill').style.transform=`scaleX(${p})`;$('load-track').classList.remove('is-preview');$('load-track').setAttribute('aria-valuemin','0');$('load-track').setAttribute('aria-valuemax','100');$('load-track').setAttribute('aria-valuenow',Math.round(p*100));$('load-track').setAttribute('aria-label','网站加载进度');$('load-percent').textContent=`${Math.round(p*100)}%`;$('load-label').textContent=label||'碑间正在准备';
     },
-    setReady(onEnter){this.setProgress(1,'碑间已就绪，随时入内');document.querySelector('.loading-screen').classList.add('is-ready');$('enter').hidden=false;resize();$('enter').onclick=()=>{if(typeof onEnter==='function')onEnter();};}
+    setReady(onEnter){this.setProgress(1,'展览准备完成');document.querySelector('.loading-screen').classList.add('is-ready');$('enter').hidden=false;resize();$('enter').onclick=()=>{if(typeof onEnter==='function')onEnter();};}
   };
   if(!projection||!depth){say('石碑图像尚未准备好，请重新打开试玩文件。');return;}
   startRound();frame=requestAnimationFrame(tick);

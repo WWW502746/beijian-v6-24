@@ -1,6 +1,6 @@
 {
   "basePath": "/beijian-v6-24/",
-  "revision": "stack20261019",
+  "revision": "stackui20261019",
   "desktop": {
     "files": [
       {
@@ -487,7 +487,10 @@
       },
       {
         "url": "/beijian-v6-24/assets/loading-game/game.js",
-        "group": "images-fonts"
+        "group": "images-fonts",
+        "aliases": [
+          "/beijian-v6-24/assets/loading-game/game.js?v=stackui20261019"
+        ]
       },
       {
         "url": "/beijian-v6-24/assets/loading-game/glyphs.js",
@@ -497,7 +500,7 @@
         "url": "/beijian-v6-24/assets/loading-game/index.html",
         "group": "images-fonts",
         "aliases": [
-          "/beijian-v6-24/assets/loading-game/index.html?v=stack20261019"
+          "/beijian-v6-24/assets/loading-game/index.html?v=stackui20261019"
         ]
       },
       {
@@ -518,7 +521,10 @@
       },
       {
         "url": "/beijian-v6-24/assets/loading-game/style.css",
-        "group": "images-fonts"
+        "group": "images-fonts",
+        "aliases": [
+          "/beijian-v6-24/assets/loading-game/style.css?v=stackui20261019"
+        ]
       },
       {
         "url": "/beijian-v6-24/assets/models/dragon/dragon.glb",
@@ -1309,14 +1315,14 @@
         "url": "/beijian-v6-24/preload.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/preload.css?v=stack20261019"
+          "/beijian-v6-24/preload.css?v=stackui20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/preload.js",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/preload.js?v=stack20261019"
+          "/beijian-v6-24/preload.js?v=stackui20261019"
         ]
       },
       {
@@ -1501,7 +1507,10 @@
       },
       {
         "url": "/beijian-v6-24/assets/loading-game/game.js",
-        "group": "images-fonts"
+        "group": "images-fonts",
+        "aliases": [
+          "/beijian-v6-24/assets/loading-game/game.js?v=stackui20261019"
+        ]
       },
       {
         "url": "/beijian-v6-24/assets/loading-game/glyphs.js",
@@ -1511,7 +1520,7 @@
         "url": "/beijian-v6-24/assets/loading-game/index.html",
         "group": "images-fonts",
         "aliases": [
-          "/beijian-v6-24/assets/loading-game/index.html?v=stack20261019"
+          "/beijian-v6-24/assets/loading-game/index.html?v=stackui20261019"
         ]
       },
       {
@@ -1532,7 +1541,10 @@
       },
       {
         "url": "/beijian-v6-24/assets/loading-game/style.css",
-        "group": "images-fonts"
+        "group": "images-fonts",
+        "aliases": [
+          "/beijian-v6-24/assets/loading-game/style.css?v=stackui20261019"
+        ]
       },
       {
         "url": "/beijian-v6-24/assets/models/dragon/dragon.glb",
@@ -2289,14 +2301,14 @@
         "url": "/beijian-v6-24/preload.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/preload.css?v=stack20261019"
+          "/beijian-v6-24/preload.css?v=stackui20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/preload.js",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/preload.js?v=stack20261019"
+          "/beijian-v6-24/preload.js?v=stackui20261019"
         ]
       },
       {
