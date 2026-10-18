@@ -1,4 +1,7 @@
 html.is-preparing, .is-preparing body { overflow:hidden!important; }
+.loading-game-frame { position:absolute; inset:0; width:100%; height:100%; border:0; visibility:hidden; background:#0b0c0c; }
+.has-loading-game .loading-game-frame { visibility:visible; }
+.has-loading-game > .preparation, .has-loading-game > .preparation__footer { display:none; }
 .is-preparing [data-page="works"] { display:block; position:fixed!important; inset:0; opacity:1!important; pointer-events:none; }
 .is-preparing .works-module--archive { display:none; }
 .is-preparing .boot__line i { animation:none; transform:scaleX(0); }

@@ -1,6 +1,6 @@
 {
   "basePath": "/beijian-v6-24/",
-  "revision": "loadresume20261018b",
+  "revision": "stack20261019",
   "desktop": {
     "files": [
       {
@@ -471,6 +471,53 @@
       },
       {
         "url": "/beijian-v6-24/assets/lettering/work-titles.png",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/art.js",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/beijian.svg",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/feedback.js",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/game.js",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/glyphs.js",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/index.html",
+        "group": "images-fonts",
+        "aliases": [
+          "/beijian-v6-24/assets/loading-game/index.html?v=stack20261019"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/paper-data.js",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/render-data.js",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/stele-courtyard-mobile.webp",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/stele-courtyard.webp",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/style.css",
         "group": "images-fonts"
       },
       {
@@ -1262,14 +1309,14 @@
         "url": "/beijian-v6-24/preload.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/preload.css?v=hdpreload20261017"
+          "/beijian-v6-24/preload.css?v=stack20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/preload.js",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/preload.js?v=loadresume20261018b"
+          "/beijian-v6-24/preload.js?v=stack20261019"
         ]
       },
       {
@@ -1438,6 +1485,53 @@
       },
       {
         "url": "/beijian-v6-24/assets/lettering/work-titles.png",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/art.js",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/beijian.svg",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/feedback.js",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/game.js",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/glyphs.js",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/index.html",
+        "group": "images-fonts",
+        "aliases": [
+          "/beijian-v6-24/assets/loading-game/index.html?v=stack20261019"
+        ]
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/paper-data.js",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/render-data.js",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/stele-courtyard-mobile.webp",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/stele-courtyard.webp",
+        "group": "images-fonts"
+      },
+      {
+        "url": "/beijian-v6-24/assets/loading-game/style.css",
         "group": "images-fonts"
       },
       {
@@ -2195,14 +2289,14 @@
         "url": "/beijian-v6-24/preload.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/preload.css?v=hdpreload20261017"
+          "/beijian-v6-24/preload.css?v=stack20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/preload.js",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/preload.js?v=loadresume20261018b"
+          "/beijian-v6-24/preload.js?v=stack20261019"
         ]
       },
       {
@@ -2290,6 +2384,8 @@
     ".nojekyll",
     "assets/landing-v5/fandol-LICENSE.txt",
     "vendor/three/LICENSE",
-    "vendor/lucide-LICENSE"
+    "vendor/lucide-LICENSE",
+    "assets/loading-game/vendor/ZZFX-LICENSE.txt",
+    "assets/loading-game/vendor/ZZFX-SOURCE.txt"
   ]
 }

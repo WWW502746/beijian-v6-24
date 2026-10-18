@@ -13,6 +13,36 @@
   const bar = boot.querySelector('[role="progressbar"]'), fill = bar.querySelector('i');
   const number = boot.querySelector('.preparation__numbers strong'), detail = boot.querySelector('.preparation__numbers small');
   const status = boot.querySelector('.preparation__status'), enter = boot.querySelector('.preparation__enter'), retry = boot.querySelector('.preparation__retry');
+  const gameFrame = document.createElement('iframe');
+  gameFrame.className = 'loading-game-frame';
+  gameFrame.title = '等待之间，叠石成拓';
+  gameFrame.src = 'assets/loading-game/index.html?v=stack20261019';
+  gameFrame.setAttribute('allow', 'autoplay');
+  let gameWindow, gameEntered = false;
+  function syncGame() {
+    if (!gameWindow || gameEntered) return;
+    const game = gameWindow.beijianStack;
+    game.setProgress(Number(bar.getAttribute('aria-valuenow')) / 100, status.textContent);
+    const document = gameWindow.document;
+    document.querySelector('#load-detail').textContent = detail.textContent;
+    document.querySelector('#load-note').textContent = api.state === 'error' ? boot.querySelector('.preparation__note').textContent : '';
+    const resume = document.querySelector('#load-retry');
+    resume.hidden = retry.hidden; resume.textContent = retry.textContent;
+    if (api.state === 'ready' && document.querySelector('#enter').hidden) game.setReady(() => enter.click());
+  }
+  gameFrame.addEventListener('load', () => {
+    const content = gameFrame.contentWindow;
+    if (!content?.beijianStack) return;
+    gameWindow = content;
+    content.document.querySelector('#load-retry').onclick = () => retry.click();
+    syncGame(); boot.classList.add('has-loading-game');
+  });
+  const gameSync = new MutationObserver(syncGame);
+  gameSync.observe(boot.querySelector('.preparation'), {subtree: true, childList: true, characterData: true, attributes: true, attributeFilter: ['hidden', 'aria-valuenow']});
+  window.addEventListener('site:entered', () => {
+    gameEntered = true; gameSync.disconnect(); gameFrame.remove(); gameWindow = null;
+  }, {once: true});
+  boot.append(gameFrame);
   const main = document.querySelector('main'), header = document.querySelector('.site-header');
   main.inert = header.inert = true;
   let running = false, manifest, cache, previousCaches = [], downloadFailure, completed = 0, doneFiles = 0, lastPercent = 0, lastDetail = '';
