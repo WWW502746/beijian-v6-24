@@ -68,7 +68,6 @@
   let streak=0, best=0, misses=0, messageTime=0,stoneDust=[],captionAnimations=[];
   let pointer=null, lastBrush=null, keyHeld=false, keyTime=0, readyToPeel=false, inkDirty=true;
   let cells=[], covered=0, camera={x:0,y:0,s:1}, previous=0, frame=0;
-  let visualBottom=-1;
   try { best = Math.max(0, Math.min(999, Number(localStorage.getItem('beijian-rubbing-best'))||0)); } catch (_) {}
   const designIds=['beijian','shanchuanji','shanchuan','songfengji','fenggu','shanchuanji','changle','songfengji'];
   const designs=designIds.map(id=>window.STELE_DESIGNS.find(d=>d.id===id)).filter(Boolean);
@@ -385,6 +384,7 @@
     canvas.width=mobile?700:900;canvas.height=mobile?1000:760;
     if(!projection||!depth)return;
     const bounds=canvas.getBoundingClientRect(),hud=document.querySelector('.scoreline').getBoundingClientRect();
+    if(desktopLayout.matches)play.style.setProperty('--stage-height',`${Math.ceil(bounds.height)}px`);
     camera.cssScale=bounds.height/canvas.height;
     camera.origin=mobile?190:115;
     const projectedHeight=Math.abs(projection.b*W)+Math.abs(projection.d*H)+Math.abs(depth.y)+40;
@@ -406,24 +406,8 @@
     const baseBottom=(camera.y+(project(W/2,H).y+28)*camera.s)*camera.cssScale;
     const lift=nearStone?Math.min(0,baseBottom+36-canvas.height*camera.cssScale-25):0;
     if(desktopLayout.matches){
-      let bottom=baseBottom+6;
-      if(['covering','rubbing','peeling','result'].includes(phase)){
-        const t=paperTransform(),cover=phase==='covering'?ease(clamp(phaseTime/(reduced?.25:1.1),0,1)):1;
-        const angle=t.angle+(1-cover)*-.045,cos=Math.cos(angle),sin=Math.sin(angle);
-        const sx=t.scale,sy=t.scale*(.88+.12*cover),ty=t.y-(1-cover)*150;
-        for(const [x,y] of [[0,0],[PW,0],[PW,PH],[0,PH]]){
-          const p=project(t.x+x*sx*cos-y*sy*sin,ty+x*sx*sin+y*sy*cos);
-          bottom=Math.max(bottom,(camera.y+p.y*camera.s)*camera.cssScale+10);
-        }
-      }
-      const nextBottom=Math.round(clamp(bottom,0,Math.floor(canvas.height*camera.cssScale)));
-      if(nextBottom!==visualBottom){
-        visualBottom=nextBottom;
-        play.style.setProperty('--visual-bottom',`${visualBottom}px`);
-      }
       if(caption.style.transform)caption.style.transform='';
     }else{
-      visualBottom=-1;
       caption.style.transform=`translateY(${Math.round(lift)}px)`;
     }
   }

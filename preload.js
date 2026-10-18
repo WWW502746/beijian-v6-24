@@ -16,7 +16,7 @@
   const gameFrame = document.createElement('iframe');
   gameFrame.className = 'loading-game-frame';
   gameFrame.title = '等待之间，叠石成拓';
-  const gameURL = new URL('assets/loading-game/index.html?v=stackreadable20261019', location.href);
+  const gameURL = new URL('assets/loading-game/index.html?v=stackfixed20261019', location.href);
   gameFrame.setAttribute('allow', 'autoplay');
   let gameWindow, gameEntered = false;
   function syncGame() {
