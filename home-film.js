@@ -34,6 +34,7 @@
     clip.video.currentTime = clip.desiredTime;
   }
   function render() {
+    if (!trigger) return;
     const t = playhead.progress * 2;
     const local = [Math.min(t, 1), Math.max(0, t - 1)];
     const current = t < 1 ? 0 : 1;
@@ -105,6 +106,7 @@
   window.homeFilm = {
     goTo,
     async prepare() {
+      if (!trigger) return;
       prepared = true;
       warming = true;
       clips.forEach(prepareClip);
@@ -146,7 +148,7 @@
     button.querySelector('span').textContent = clean ? '显示文字' : '纯画面';
     button.title = clean ? '显示页面文字' : '隐藏文字，只看画面';
   });
-  if (window.gsap && window.ScrollTrigger && !reduced.matches) {
+  if (window.gsap && window.ScrollTrigger && window.pageMotion?.enabled && !reduced.matches) {
     gsap.registerPlugin(ScrollTrigger);
     film.classList.add('is-enhanced');
     trigger = gsap.to(playhead, {

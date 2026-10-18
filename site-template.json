@@ -1,6 +1,6 @@
 {
   "basePath": "/beijian-v6-24/",
-  "revision": "github24fps20261017",
+  "revision": "homepages20261018",
   "desktop": {
     "files": [
       {
@@ -1088,7 +1088,7 @@
         "url": "/beijian-v6-24/home-film.js",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/home-film.js?v=hdpreload20261017"
+          "/beijian-v6-24/home-film.js?v=homepages20261018"
         ]
       },
       {
@@ -2055,7 +2055,7 @@
         "url": "/beijian-v6-24/home-film.js",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/home-film.js?v=hdpreload20261017"
+          "/beijian-v6-24/home-film.js?v=homepages20261018"
         ]
       },
       {
