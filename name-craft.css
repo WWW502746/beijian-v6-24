@@ -116,5 +116,5 @@ body.is-name[data-view="craft"] .name-footer li[aria-current]::after { left:50%;
 body.is-name[data-view="craft"] .name-footer > span { font-size:inherit; }
 body.is-name[data-view="craft"] .name-footer > span:last-child { font:clamp(9px,calc(11 * var(--u)),15px) Georgia,serif; letter-spacing:calc(2 * var(--u)); color:#858b82; }
 @media (prefers-reduced-motion:reduce) {
-  body.is-name[data-view="craft"] .material-option--stone:hover .stone-material { transform:none; }
+  :where(html.is-mobile-device) body.is-name[data-view="craft"] .material-option--stone:hover .stone-material { transform:none; }
 }

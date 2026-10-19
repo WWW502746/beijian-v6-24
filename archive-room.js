@@ -3,8 +3,8 @@
   const scene = root?.querySelector('.scene');
   if (!root || !scene) return;
 
-  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const mobile = window.matchMedia('(max-width:800px), (max-width:1100px) and (pointer:coarse)');
+  const reduced = window.matchMedia(window.beijianDevice.reducedQuery);
+  const mobile = window.matchMedia(window.beijianDevice.mobileQuery);
   const objects = [...root.querySelectorAll('[data-depth]')].map((node) => ({
     node,
     depth: Number(node.dataset.depth || 0),

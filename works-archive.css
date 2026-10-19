@@ -268,7 +268,7 @@
   .archive-catalog .progress { margin-right: 0; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .archive-catalog .archive-object figure { animation: none; }
-  .archive-catalog .archive-object img { transition: none; }
+@media (prefers-reduced-motion:reduce) {
+  :where(html.is-mobile-device) .archive-catalog .archive-object figure { animation: none; }
+  :where(html.is-mobile-device) .archive-catalog .archive-object img { transition: none; }
 }

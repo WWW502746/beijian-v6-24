@@ -4,7 +4,7 @@
   const $ = id => document.getElementById(id);
   const play = document.querySelector('.play'), caption=document.querySelector('.caption'), hint = $('hint'), score = $('score');
   const actions = document.querySelector('.result-actions');
-  const reduced = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const reduced = matchMedia(window.beijianDevice.reducedQuery).matches;
   const desktopLayout = matchMedia('(min-width:801px)');
   const W = 240, H = 480, L = 60, PX = 16, PY = 18, PW = 272, PH = 520;
   const projection = window.STELE_RENDER_DATA?.projection;

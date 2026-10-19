@@ -1,7 +1,7 @@
 import { createPaperScene } from './assets/name/craft-motion/paper-scene.js';
 
 export function mountPaperRolls(container) {
-  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const reduced = matchMedia(window.beijianDevice.reducedQuery);
   const listeners = new AbortController();
   const rolls = [];
   let disposed = false;

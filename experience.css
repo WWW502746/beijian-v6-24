@@ -84,4 +84,4 @@ body:has(.work-picker[open]){overflow:hidden}
 .experience-controls:has(button:focus-visible){opacity:1;visibility:visible}
 @media(pointer:fine){body,button{cursor:auto}.cursor{display:none!important}button{cursor:pointer}}
 @media(max-width:800px){.work-chapters{top:72px;gap:22px;overflow-x:auto;scrollbar-width:none}.work-details,.orbit-section{scroll-margin-top:148px}.experience-controls{bottom:max(12px,env(safe-area-inset-bottom));right:20px;gap:16px}.detail-after{padding-bottom:100px}}
-@media(prefers-reduced-motion:reduce){.flight-image{display:none}.work-chapters button::after{transition:none}}
+@media(prefers-reduced-motion:reduce){:where(html.is-mobile-device) .flight-image{display:none}:where(html.is-mobile-device) .work-chapters button::after{transition:none}}

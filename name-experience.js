@@ -1,10 +1,12 @@
 import {styles, spectrum, hashText, readName, candidates, profileFor, validSession} from './name-core.js?v=xunzi20261015';
 import {finishOptions, defaultFinish, normalizeFinish, materialFiles, paintRubbing} from './name-finish.js?v=xunzi20261015';
-import {mountResultFlip} from './name-result-flip.js?v=v6result20261015';
+import {mountResultFlip} from './name-result-flip.js?v=fullmotion20261019';
 
 const root = document.getElementById('name-app');
 const page = root.closest('[data-page]');
 const key = 'beilin-name-v4';
+const mobileLayout = matchMedia(window.beijianDevice.mobileQuery);
+const reducedMotion = matchMedia(window.beijianDevice.reducedQuery);
 const glyphCache = new Map();
 const cleanGlyphCache = new Map();
 const loadedFonts = new Set();
@@ -23,7 +25,7 @@ function disposePaperRolls() {
 
 function mountCraftMotion() {
   const mount = ++paperMount, controls = root.querySelector('.craft-controls');
-  import('./name-paper-motion.js?v=xunzi20261015').then(({mountPaperRolls}) => {
+  import('./name-paper-motion.js?v=fullmotion20261019').then(({mountPaperRolls}) => {
     if (mount !== paperMount || !controls?.isConnected || !page.classList.contains('page--active')) return;
     const controller = mountPaperRolls(controls);
     if (mount !== paperMount || !controls.isConnected || !page.classList.contains('page--active')) controller.dispose();
@@ -452,7 +454,7 @@ root.addEventListener('input', event => {
 // Retain the work gallery lift and tilt, with no light sweep or hover glow.
 root.addEventListener('pointermove', event => {
   const card = event.target.closest('.stone-specimen');
-  if (!card || !matchMedia('(pointer: fine)').matches || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!card || event.pointerType === 'touch' || reducedMotion.matches || (mobileLayout.matches && !matchMedia('(pointer: fine)').matches)) return;
   const rect = card.getBoundingClientRect();
   const x = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width));
   const y = Math.max(0, Math.min(1, (event.clientY - rect.top) / rect.height));

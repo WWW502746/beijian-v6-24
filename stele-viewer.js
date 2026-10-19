@@ -20,7 +20,7 @@ let distance = 6;
 let size = new THREE.Vector3(1.2, 2.43, .57);
 const originals = new Map();
 const target = new THREE.Vector3(0, 1.215, 0);
-const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reducedMotion = matchMedia(window.beijianDevice.reducedQuery).matches;
 
 function fail(error) {
   console.error('Stele viewer:', error);

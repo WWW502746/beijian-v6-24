@@ -1,5 +1,5 @@
 (() => {
-  const mode = matchMedia('(max-width:800px), (max-width:1100px) and (pointer:coarse)');
+  const mode = matchMedia(window.beijianDevice.mobileQuery);
   mode.addEventListener('change', () => location.reload());
   if (!mode.matches) return;
   const film = document.querySelector('.home-film');

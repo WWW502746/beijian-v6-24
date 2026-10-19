@@ -9,7 +9,7 @@ const detailPage = document.querySelector(".detail-page");
 const artworkButtons = [...document.querySelectorAll(".work")];
 const artifactViewers = [...document.querySelectorAll("[data-artifact-viewer]")];
 const glyphFieldFrame = document.querySelector(".glyph-field-frame");
-const mobileExhibition = matchMedia('(max-width:800px), (max-width:1100px) and (pointer:coarse)').matches;
+const mobileExhibition = matchMedia(window.beijianDevice.mobileQuery).matches;
 if (glyphFieldFrame && mobileExhibition) glyphFieldFrame.closest('.works-module--glyph').remove();
 function loadGlyphField() {
   if (!glyphFieldFrame?.isConnected || mobileExhibition || glyphFieldFrame.dataset.loaded || document.hidden) return;

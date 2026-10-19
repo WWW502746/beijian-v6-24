@@ -184,8 +184,8 @@ body.is-name[data-view="result"] .name-footer { border-color: rgb(49, 53, 47); c
 :where(body.is-name) .review-heading { gap: 24px; }
 :where(body.is-name) .review-heading > p:last-child { padding-left: 24px; }
 }
-@media (prefers-reduced-motion: reduce) {
-:where(body.is-name) *, :where(body.is-name) ::before, :where(body.is-name) ::after { transition: none !important; scroll-behavior: auto !important; }
+@media (prefers-reduced-motion:reduce) {
+:where(html.is-mobile-device) :where(body.is-name) *, :where(html.is-mobile-device) :where(body.is-name) ::before, :where(html.is-mobile-device) :where(body.is-name) ::after { transition: none !important; scroll-behavior: auto !important; }
 }
 @media (max-height: 780px) and (min-width: 901px) {
 :where(body.is-name) .paper-gallery { width: min(47vw, -290px + 100svh); }
@@ -205,7 +205,7 @@ body.is-name[data-view="result"] .name-footer { border-color: rgb(49, 53, 47); c
 :where(body.is-name) .material-group--stone .material-option img { height: 38px; }
 :where(body.is-name) .material-group--paper .material-option img { height: 30px; }
 }
-@media (prefers-reduced-motion: reduce) {
-:where(body.is-name) .stone-specimen:is(:hover, :focus-visible) .stone-object { transform: none; }
+@media (prefers-reduced-motion:reduce) {
+:where(html.is-mobile-device) :where(body.is-name) .stone-specimen:is(:hover, :focus-visible) .stone-object { transform: none; }
 }
 body.is-name:is([data-view="pick"],[data-view="review"],[data-view="craft"]) .name-exit { display:none; }

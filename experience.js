@@ -1,7 +1,7 @@
 (() => {
   if (!window.gsap || !window.ScrollTrigger) return;
   gsap.registerPlugin(ScrollTrigger);
-  const reduce = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reduce = () => matchMedia(window.beijianDevice.reducedQuery).matches;
   const progress = document.createElement('div');
   progress.className = 'reading-progress'; progress.setAttribute('aria-hidden','true'); document.body.append(progress);
   const controls = document.createElement('nav');
@@ -125,7 +125,7 @@
         .to(flight,{autoAlpha:0,duration:.34,ease:'power1.out'},.68);
     } else disposeFlight();
     motion=gsap.matchMedia();
-    motion.add({desktop:'(min-width:801px)',mobile:'(max-width:800px)',reduce:'(prefers-reduced-motion: reduce)'}, context => {
+    motion.add({desktop:window.beijianDevice.desktopQuery,mobile:window.beijianDevice.mobileQuery,reduce:window.beijianDevice.reducedQuery}, context => {
       const minimal=context.conditions.reduce;
       const moduleHome=page===home && window.pageMotion?.enabled;
       if (!moduleHome) gsap.fromTo(progress,{scaleX:0},{scaleX:1,ease:'none',scrollTrigger:{trigger:page,start:'top top',end:'bottom bottom',scrub:true}});
@@ -169,7 +169,7 @@
   document.querySelectorAll('main img').forEach(img=>img.addEventListener('load',()=>{pendingRefresh=true;refreshWhenIdle();},{once:true}));
 
   // The opening uses native scroll; later exhibition routes retain their existing controls.
-  const desktop = matchMedia('(min-width:801px) and (pointer:fine)');
+  const desktop = matchMedia(window.beijianDevice.desktopQuery);
   const home = document.querySelector('[data-page="home"]');
   const sections = [...home.querySelectorAll('.scene')];
   const worksModules = [...document.querySelectorAll('[data-works-module]')];
@@ -305,7 +305,7 @@
     if(direction){event.preventDefault();if(!event.repeat)step(direction);}
   });
   window.addEventListener('resize',()=>{if(routeMotion)routeMotion.progress(1);restore();});
-  matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change',()=>{
+  matchMedia(window.beijianDevice.reducedQuery).addEventListener('change',()=>{
     if(routeMotion)routeMotion.progress(1);restore();disposeFlight();
   });
   document.addEventListener('visibilitychange',()=>{if(document.hidden){if(routeMotion)routeMotion.progress(1);restore();disposeFlight();}});

@@ -298,6 +298,6 @@ img { display: block; width: 100%; }
   .about-copy { align-self:start; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *,*::before,*::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+@media (prefers-reduced-motion:reduce) {
+  :where(html.is-mobile-device) *,:where(html.is-mobile-device) *::before,:where(html.is-mobile-device) *::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
 }

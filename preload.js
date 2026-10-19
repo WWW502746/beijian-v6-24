@@ -1,5 +1,5 @@
 (() => {
-  const required = matchMedia('(min-width:801px) and (pointer:fine)').matches;
+  const required = !window.beijianDevice.mobile;
   let resolveReady;
   const ready = new Promise(resolve => { resolveReady = resolve; });
   const api = window.sitePreload = {required, state: required ? 'loading' : 'disabled', ready, start};
@@ -16,7 +16,7 @@
   const gameFrame = document.createElement('iframe');
   gameFrame.className = 'loading-game-frame';
   gameFrame.title = '等待之间，叠石成拓';
-  const gameURL = new URL('assets/loading-game/index.html?v=stackraised20261019', location.href);
+  const gameURL = new URL('assets/loading-game/index.html?v=fullmotion20261019', location.href);
   gameFrame.setAttribute('allow', 'autoplay');
   let gameWindow, gameEntered = false;
   function syncGame() {

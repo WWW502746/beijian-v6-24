@@ -300,7 +300,7 @@ body.is-name-dialog { overflow: hidden; }
   .name-source-list h3 { font-size: 18px; }
   .name-source-list a { margin-right: 10px; }
 }
-@media (prefers-reduced-motion: reduce) {
-  .name-page.page--active { animation: none; }
-  .name-page * { scroll-behavior: auto; transition: none !important; }
+@media (prefers-reduced-motion:reduce) {
+  :where(html.is-mobile-device) .name-page.page--active { animation: none; }
+  :where(html.is-mobile-device) .name-page * { scroll-behavior: auto; transition: none !important; }
 }

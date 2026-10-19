@@ -1,5 +1,5 @@
 const here = new URL('.', import.meta.url);
-const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+const reducedMotion = matchMedia(window.beijianDevice.reducedQuery);
 
 function formatStory(story) {
   story.querySelectorAll('.name-result__chapters article').forEach(article => {
