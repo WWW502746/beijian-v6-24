@@ -1,6 +1,6 @@
 {
   "basePath": "/beijian-v6-24/",
-  "revision": "fullmotion20261019",
+  "revision": "blankname20261019",
   "desktop": {
     "files": [
       {
@@ -1273,7 +1273,7 @@
         "url": "/beijian-v6-24/name-experience.js",
         "group": "name",
         "aliases": [
-          "/beijian-v6-24/name-experience.js?v=fullmotion20261019"
+          "/beijian-v6-24/name-experience.js?v=blankname20261019"
         ]
       },
       {
@@ -1287,7 +1287,7 @@
         "url": "/beijian-v6-24/name-loader.js",
         "group": "name",
         "aliases": [
-          "/beijian-v6-24/name-loader.js?v=fullmotion20261019"
+          "/beijian-v6-24/name-loader.js?v=blankname20261019"
         ]
       },
       {
@@ -2269,7 +2269,7 @@
         "url": "/beijian-v6-24/name-experience.js",
         "group": "name",
         "aliases": [
-          "/beijian-v6-24/name-experience.js?v=fullmotion20261019"
+          "/beijian-v6-24/name-experience.js?v=blankname20261019"
         ]
       },
       {
@@ -2283,7 +2283,7 @@
         "url": "/beijian-v6-24/name-loader.js",
         "group": "name",
         "aliases": [
-          "/beijian-v6-24/name-loader.js?v=fullmotion20261019"
+          "/beijian-v6-24/name-loader.js?v=blankname20261019"
         ]
       },
       {

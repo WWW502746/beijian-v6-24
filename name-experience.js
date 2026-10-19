@@ -12,7 +12,7 @@ const cleanGlyphCache = new Map();
 const loadedFonts = new Set();
 const today = () => new Date().toLocaleDateString('sv-SE', {timeZone: 'Asia/Shanghai'});
 let coverage, profiles, historicalPersonas, assetsPromise, materialsPromise, materials, texture, busy = false, restored = false;
-let state = {view: 'entry', name: '王子墨', index: 0, choices: [null, null, null], finish: {...defaultFinish}, date: today()};
+let state = {view: 'entry', name: '', index: 0, choices: [null, null, null], finish: {...defaultFinish}, date: today()};
 let active = null;
 let paperRolls = null, paperMount = 0;
 let resultFlip = null;
