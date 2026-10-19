@@ -3,7 +3,7 @@
   :where(html.is-mobile-device) .archive-catalog .archive-object:nth-child(n) { margin-top: 0 !important; }
   :where(html.is-mobile-device) .archive-catalog .archive-object figure { height: 100% !important; }
   :where(html.is-mobile-device) .archive-catalog .archive-object { touch-action: manipulation; }
-  :where(html.is-mobile-device) .archive-scene { height: 100svh; min-height: 620px; }
+  :where(html.is-mobile-device) .archive-scene { height: 100vh; height: 100svh; min-height: 620px; }
   :where(html.is-mobile-device) .archive-scene__inner { width: 100%; height: 100%; }
   :where(html.is-mobile-device) .archive-object--stele { top: 26%; left: 6%; width: 13%; height: 27%; }
   :where(html.is-mobile-device) .archive-object--floral { top: 26%; left: 26%; width: 24%; height: 24%; }
@@ -16,10 +16,10 @@
   :where(html.is-mobile-device) .archive-catalog .archive-object--dragon figcaption { top: -18px !important; left: 8% !important; }
   :where(html.is-mobile-device) .archive-catalog .archive-object--fragment figcaption { top: -28px !important; }
   :where(html.is-mobile-device) .archive-catalog .scene-caption { bottom: 8%; left: 26%; font-size: 10px; }
-  :where(html.is-mobile-device) .works-module--glyph { height: 100svh; min-height: 560px; overflow: hidden; }
+  :where(html.is-mobile-device) .works-module--glyph { height: 100vh; height: 100svh; min-height: 560px; overflow: hidden; }
   :where(html.is-mobile-device) .glyph-field-frame { height: 100%; min-height: 560px; }
-  :where(html.is-mobile-device) .name-gateway { height: auto; min-height: 100svh; overflow: visible; }
-  :where(html.is-mobile-device) .name-gateway .name-entry { min-height: max(680px, 100svh); height: auto; padding: 36svh var(--pad) 138px; align-items: flex-start; }
+  :where(html.is-mobile-device) .name-gateway { height: auto; min-height: 100vh; min-height: 100svh; overflow: visible; }
+  :where(html.is-mobile-device) .name-gateway .name-entry { min-height: max(680px, 100vh); min-height: max(680px, 100svh); height: auto; padding: 36vh var(--pad) 138px; padding: 36svh var(--pad) 138px; align-items: flex-start; }
   :where(html.is-mobile-device) .name-gateway .name-entry__copy { width: 100%; margin-left: 0; }
   :where(html.is-mobile-device) .name-gateway .name-entry__image { height: 66%; object-position: 65% top; }
   :where(html.is-mobile-device) .name-gateway .name-entry::before { background: linear-gradient(0deg, #070808 12%, #070808e8 42%, #07080822 85%); }
@@ -49,7 +49,7 @@
   :where(html.is-mobile-device) body.is-name:is([data-view="pick"], [data-view="review"], [data-view="craft"]) .name-footer ol { width: 100%; gap: 8px; justify-content: space-between; }
   :where(html.is-mobile-device) body.is-name:is([data-view="pick"], [data-view="review"], [data-view="craft"]) .name-footer li { width: auto; padding: 12px 0; font-size: 12px; letter-spacing: 0; }
   :where(html.is-mobile-device) body.is-name:is([data-view="pick"], [data-view="review"], [data-view="craft"]) .name-footer li span { margin-right: 4px; }
-  :where(html.is-mobile-device) body.is-name .experiment-pick { min-height: calc(100svh - 68px); padding: 100px 22px 26px; gap: 28px; }
+  :where(html.is-mobile-device) body.is-name .experiment-pick { min-height: calc(100vh - 68px); min-height: calc(100svh - 68px); padding: 100px 22px 26px; gap: 28px; }
   :where(html.is-mobile-device) body.is-name .pick-heading { position: static; display: flex; flex-direction: column; gap: 22px; margin-bottom: 0; }
   :where(html.is-mobile-device) body.is-name .pick-heading h1 { font-size: 36px; margin-bottom: 10px; }
   :where(html.is-mobile-device) body.is-name .pick-heading p { font-size: 14px; }
@@ -59,7 +59,7 @@
   :where(html.is-mobile-device) body.is-name .paper-gallery { width: 100%; max-width: 620px; margin: auto; flex: 0 0 auto; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 18px; }
   :where(html.is-mobile-device) body.is-name .paper-number { min-height: 36px; font-size: 13px; }
   :where(html.is-mobile-device) body.is-name .name-confirm { gap: 0; }
-  :where(html.is-mobile-device) body.is-name .experiment-review { min-height: calc(100svh - 68px); padding: 100px 22px 26px; gap: 30px; }
+  :where(html.is-mobile-device) body.is-name .experiment-review { min-height: calc(100vh - 68px); min-height: calc(100svh - 68px); padding: 100px 22px 26px; gap: 30px; }
   :where(html.is-mobile-device) body.is-name .review-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 24px; }
   :where(html.is-mobile-device) body.is-name .review-heading h1 { margin: 0; font-size: 44px; }
   :where(html.is-mobile-device) body.is-name .review-heading > p:last-child { width: 100%; padding: 0; border: 0; margin: 0; font-size: 16px; }
@@ -71,7 +71,7 @@
   :where(html.is-mobile-device) body.is-name .review-message:empty { display: none; }
 
   :where(html.is-mobile-device) body.is-name[data-view="craft"] { --u: 1px; overflow: visible; }
-  :where(html.is-mobile-device) body.is-name[data-view="craft"] .name-page { height: auto; min-height: 100svh; }
+  :where(html.is-mobile-device) body.is-name[data-view="craft"] .name-page { height: auto; min-height: 100vh; min-height: 100svh; }
   :where(html.is-mobile-device) body.is-name[data-view="craft"] #name-app { display: block; height: auto; padding-top: 72px; }
   :where(html.is-mobile-device) body.is-name[data-view="craft"] .experiment-craft {
     width: 100%; height: auto; min-height: 0; padding: 26px 22px 24px; display: flex; flex-direction: column; gap: 28px;

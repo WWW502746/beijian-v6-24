@@ -102,7 +102,7 @@ function paintResultSeal(ctx, label, scale) {
     return {x: 64 + Math.cos(angle) * 58 * wobble, y: 84 + Math.sin(angle) * 78 * wobble};
   });
   ink.beginPath();
-  ink.moveTo((outline[0].x + outline.at(-1).x) / 2, (outline[0].y + outline.at(-1).y) / 2);
+  ink.moveTo((outline[0].x + outline[outline.length - 1].x) / 2, (outline[0].y + outline[outline.length - 1].y) / 2);
   outline.forEach((point, index) => {
     const next = outline[(index + 1) % outline.length];
     ink.quadraticCurveTo(point.x, point.y, (point.x + next.x) / 2, (point.y + next.y) / 2);
@@ -240,7 +240,8 @@ export function paintRubbing(canvas, {name, glyphs, finish: rawFinish, persona, 
   const finish = normalizeFinish(rawFinish);
   const scale = canvas.width / 900;
   const ctx = canvas.getContext('2d', {willReadFrequently: true});
-  ctx.reset();
+  if (ctx.reset) ctx.reset();
+  else canvas.width = canvas.width;
   ctx.setTransform(scale, 0, 0, scale, 0, 0);
   cover(ctx, materials[`paper-${finish.paper}`], 0, 0, 900, 1260);
 

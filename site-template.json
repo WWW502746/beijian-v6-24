@@ -1,6 +1,6 @@
 {
   "basePath": "/beijian-v6-24/",
-  "revision": "blankname20261019",
+  "revision": "compat20261019",
   "desktop": {
     "files": [
       {
@@ -523,7 +523,7 @@
         "url": "/beijian-v6-24/assets/loading-game/style.css",
         "group": "images-fonts",
         "aliases": [
-          "/beijian-v6-24/assets/loading-game/style.css?v=fullmotion20261019"
+          "/beijian-v6-24/assets/loading-game/style.css?v=compat20261019"
         ]
       },
       {
@@ -1120,7 +1120,7 @@
         "url": "/beijian-v6-24/experience.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/experience.css?v=fullmotion20261019"
+          "/beijian-v6-24/experience.css?v=compat20261019"
         ]
       },
       {
@@ -1134,14 +1134,14 @@
         "url": "/beijian-v6-24/glyph-field-embed.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/glyph-field-embed.css?v=2"
+          "/beijian-v6-24/glyph-field-embed.css?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/home-film.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/home-film.css?v=fullmotion20261019"
+          "/beijian-v6-24/home-film.css?v=compat20261019"
         ]
       },
       {
@@ -1176,7 +1176,7 @@
         "url": "/beijian-v6-24/home-media.js",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/home-media.js?v=loadresume20261018"
+          "/beijian-v6-24/home-media.js?v=compat20261019"
         ]
       },
       {
@@ -1222,14 +1222,14 @@
         "url": "/beijian-v6-24/mobile-layout.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/mobile-layout.css?v=fullmotion20261019"
+          "/beijian-v6-24/mobile-layout.css?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/mobile.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/mobile.css?v=fullmotion20261019"
+          "/beijian-v6-24/mobile.css?v=compat20261019"
         ]
       },
       {
@@ -1259,35 +1259,35 @@
         "url": "/beijian-v6-24/name-craft.css",
         "group": "name",
         "aliases": [
-          "/beijian-v6-24/name-craft.css?v=fullmotion20261019"
+          "/beijian-v6-24/name-craft.css?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/name-experience.css",
         "group": "name",
         "aliases": [
-          "/beijian-v6-24/name-experience.css?v=fullmotion20261019"
+          "/beijian-v6-24/name-experience.css?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/name-experience.js",
         "group": "name",
         "aliases": [
-          "/beijian-v6-24/name-experience.js?v=blankname20261019"
+          "/beijian-v6-24/name-experience.js?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/name-finish.js",
         "group": "name",
         "aliases": [
-          "/beijian-v6-24/name-finish.js?v=xunzi20261015"
+          "/beijian-v6-24/name-finish.js?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/name-loader.js",
         "group": "name",
         "aliases": [
-          "/beijian-v6-24/name-loader.js?v=blankname20261019"
+          "/beijian-v6-24/name-loader.js?v=compat20261019"
         ]
       },
       {
@@ -1308,14 +1308,14 @@
         "url": "/beijian-v6-24/name-result.css",
         "group": "name",
         "aliases": [
-          "/beijian-v6-24/name-result.css?v=v6result20261015"
+          "/beijian-v6-24/name-result.css?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/name-v4.css",
         "group": "name",
         "aliases": [
-          "/beijian-v6-24/name-v4.css?v=fullmotion20261019"
+          "/beijian-v6-24/name-v4.css?v=compat20261019"
         ]
       },
       {
@@ -1336,35 +1336,35 @@
         "url": "/beijian-v6-24/stele-editorial.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/stele-editorial.css?v=editorial1"
+          "/beijian-v6-24/stele-editorial.css?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/stele-viewer.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/stele-viewer.css?v=editorial1"
+          "/beijian-v6-24/stele-viewer.css?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/stele-viewer.js",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/stele-viewer.js?v=fullmotion20261019"
+          "/beijian-v6-24/stele-viewer.js?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/styles.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/styles.css?v=fullmotion20261019"
+          "/beijian-v6-24/styles.css?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/typography.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/typography.css?v=beijian1"
+          "/beijian-v6-24/typography.css?v=compat20261019"
         ]
       },
       {
@@ -1389,28 +1389,37 @@
       },
       {
         "url": "/beijian-v6-24/vendor/three/examples/jsm/controls/OrbitControls.js",
-        "group": "interface"
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/vendor/three/examples/jsm/controls/OrbitControls.js?v=compat20261019"
+        ]
       },
       {
         "url": "/beijian-v6-24/vendor/three/examples/jsm/loaders/GLTFLoader.js",
-        "group": "interface"
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/vendor/three/examples/jsm/loaders/GLTFLoader.js?v=compat20261019"
+        ]
       },
       {
         "url": "/beijian-v6-24/vendor/three/examples/jsm/utils/BufferGeometryUtils.js",
-        "group": "interface"
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/vendor/three/examples/jsm/utils/BufferGeometryUtils.js?v=compat20261019"
+        ]
       },
       {
         "url": "/beijian-v6-24/works-archive.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/works-archive.css?v=fullmotion20261019"
+          "/beijian-v6-24/works-archive.css?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/xunzi-embed.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/xunzi-embed.css?v=1"
+          "/beijian-v6-24/xunzi-embed.css?v=compat20261019"
         ]
       }
     ]
@@ -1553,7 +1562,7 @@
         "url": "/beijian-v6-24/assets/loading-game/style.css",
         "group": "images-fonts",
         "aliases": [
-          "/beijian-v6-24/assets/loading-game/style.css?v=fullmotion20261019"
+          "/beijian-v6-24/assets/loading-game/style.css?v=compat20261019"
         ]
       },
       {
@@ -2150,7 +2159,7 @@
         "url": "/beijian-v6-24/experience.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/experience.css?v=fullmotion20261019"
+          "/beijian-v6-24/experience.css?v=compat20261019"
         ]
       },
       {
@@ -2164,14 +2173,14 @@
         "url": "/beijian-v6-24/glyph-field-embed.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/glyph-field-embed.css?v=2"
+          "/beijian-v6-24/glyph-field-embed.css?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/home-film.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/home-film.css?v=fullmotion20261019"
+          "/beijian-v6-24/home-film.css?v=compat20261019"
         ]
       },
       {
@@ -2206,7 +2215,7 @@
         "url": "/beijian-v6-24/home-media.js",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/home-media.js?v=loadresume20261018"
+          "/beijian-v6-24/home-media.js?v=compat20261019"
         ]
       },
       {
@@ -2234,14 +2243,14 @@
         "url": "/beijian-v6-24/mobile-layout.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/mobile-layout.css?v=fullmotion20261019"
+          "/beijian-v6-24/mobile-layout.css?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/mobile.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/mobile.css?v=fullmotion20261019"
+          "/beijian-v6-24/mobile.css?v=compat20261019"
         ]
       },
       {
@@ -2255,35 +2264,35 @@
         "url": "/beijian-v6-24/name-craft.css",
         "group": "name",
         "aliases": [
-          "/beijian-v6-24/name-craft.css?v=fullmotion20261019"
+          "/beijian-v6-24/name-craft.css?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/name-experience.css",
         "group": "name",
         "aliases": [
-          "/beijian-v6-24/name-experience.css?v=fullmotion20261019"
+          "/beijian-v6-24/name-experience.css?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/name-experience.js",
         "group": "name",
         "aliases": [
-          "/beijian-v6-24/name-experience.js?v=blankname20261019"
+          "/beijian-v6-24/name-experience.js?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/name-finish.js",
         "group": "name",
         "aliases": [
-          "/beijian-v6-24/name-finish.js?v=xunzi20261015"
+          "/beijian-v6-24/name-finish.js?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/name-loader.js",
         "group": "name",
         "aliases": [
-          "/beijian-v6-24/name-loader.js?v=blankname20261019"
+          "/beijian-v6-24/name-loader.js?v=compat20261019"
         ]
       },
       {
@@ -2304,14 +2313,14 @@
         "url": "/beijian-v6-24/name-result.css",
         "group": "name",
         "aliases": [
-          "/beijian-v6-24/name-result.css?v=v6result20261015"
+          "/beijian-v6-24/name-result.css?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/name-v4.css",
         "group": "name",
         "aliases": [
-          "/beijian-v6-24/name-v4.css?v=fullmotion20261019"
+          "/beijian-v6-24/name-v4.css?v=compat20261019"
         ]
       },
       {
@@ -2332,35 +2341,35 @@
         "url": "/beijian-v6-24/stele-editorial.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/stele-editorial.css?v=editorial1"
+          "/beijian-v6-24/stele-editorial.css?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/stele-viewer.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/stele-viewer.css?v=editorial1"
+          "/beijian-v6-24/stele-viewer.css?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/stele-viewer.js",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/stele-viewer.js?v=fullmotion20261019"
+          "/beijian-v6-24/stele-viewer.js?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/styles.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/styles.css?v=fullmotion20261019"
+          "/beijian-v6-24/styles.css?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/typography.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/typography.css?v=beijian1"
+          "/beijian-v6-24/typography.css?v=compat20261019"
         ]
       },
       {
@@ -2385,28 +2394,37 @@
       },
       {
         "url": "/beijian-v6-24/vendor/three/examples/jsm/controls/OrbitControls.js",
-        "group": "interface"
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/vendor/three/examples/jsm/controls/OrbitControls.js?v=compat20261019"
+        ]
       },
       {
         "url": "/beijian-v6-24/vendor/three/examples/jsm/loaders/GLTFLoader.js",
-        "group": "interface"
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/vendor/three/examples/jsm/loaders/GLTFLoader.js?v=compat20261019"
+        ]
       },
       {
         "url": "/beijian-v6-24/vendor/three/examples/jsm/utils/BufferGeometryUtils.js",
-        "group": "interface"
+        "group": "interface",
+        "aliases": [
+          "/beijian-v6-24/vendor/three/examples/jsm/utils/BufferGeometryUtils.js?v=compat20261019"
+        ]
       },
       {
         "url": "/beijian-v6-24/works-archive.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/works-archive.css?v=fullmotion20261019"
+          "/beijian-v6-24/works-archive.css?v=compat20261019"
         ]
       },
       {
         "url": "/beijian-v6-24/xunzi-embed.css",
         "group": "interface",
         "aliases": [
-          "/beijian-v6-24/xunzi-embed.css?v=1"
+          "/beijian-v6-24/xunzi-embed.css?v=compat20261019"
         ]
       }
     ]

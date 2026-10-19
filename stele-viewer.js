@@ -1,6 +1,6 @@
-import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import * as THREE from './vendor/three/build/three.module.js';
+import { OrbitControls } from './vendor/three/examples/jsm/controls/OrbitControls.js?v=compat20261019';
+import { GLTFLoader } from './vendor/three/examples/jsm/loaders/GLTFLoader.js?v=compat20261019';
 
 document.querySelectorAll('[data-artifact-viewer]').forEach(initViewer);
 

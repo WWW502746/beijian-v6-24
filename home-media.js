@@ -105,7 +105,7 @@
       if (first < 0) return state;
       const cached = pack.parts.findIndex((part, index) => index > first && records.get(part.src)?.done);
       const members = pack.parts.slice(first, cached < 0 ? pack.parts.length : cached);
-      const from = members[0].offset, last = members.at(-1), end = last.offset + last.bytes;
+      const from = members[0].offset, last = members[members.length - 1], end = last.offset + last.bytes;
       if (state) stats.resumes++;
       state = { running: true, received: from, controller: new AbortController() };packets.set(pack.src, state);
       stats.maxBackground = Math.max(stats.maxBackground, [...packets.values()].filter(state => state.running).length);
@@ -191,7 +191,7 @@
       const fragments = manifest.fragments;
       const native = Math.min(manifest.duration - .000001, Math.max(0, video.currentTime));
       const target = Math.min(manifest.duration - .000001, Math.max(0, desired));
-      const at = time => fragments.find(fragment => fragment.start <= time && fragment.end > time) || fragments.at(-1);
+      const at = time => fragments.find(fragment => fragment.start <= time && fragment.end > time) || fragments[fragments.length - 1];
       const ahead = time => fragments.slice(fragments.indexOf(at(time)), fragments.indexOf(at(time)) + 3);
       // A pending native seek needs its following GOPs before chasing a newer scroll target.
       const priority = [...ahead(native), ...ahead(target)];
@@ -202,7 +202,7 @@
     async function trim(wanted) {
       const spans = [];
       for (const fragment of [...wanted].sort((a, b) => a.start - b.start)) {
-        const last = spans.at(-1);
+        const last = spans[spans.length - 1];
         if (last && fragment.start <= last[1] + .00001) last[1] = fragment.end;
         else spans.push([fragment.start, fragment.end]);
       }

@@ -31,8 +31,8 @@ body.is-name[data-view="craft"] .site-header nav button::after { left:50%; botto
 body.is-name[data-view="craft"] .site-header nav button.is-current::after { transform:translateX(-50%); background:#c55743; }
 body.is-name[data-view="craft"] .site-header .header-side,
 body.is-name[data-view="craft"] .site-header > .edition { display:none; }
-body.is-name[data-view="craft"] .name-page { min-height:0; height:100dvh; color:#e7e3d8; font-weight:400; }
-body.is-name[data-view="craft"] #name-app { height:100dvh; padding-top:calc(72 * var(--u)); display:grid; grid-template-rows:minmax(0,1fr) calc(48 * var(--u)); }
+body.is-name[data-view="craft"] .name-page { min-height:0; height:100vh; height:100dvh; color:#e7e3d8; font-weight:400; }
+body.is-name[data-view="craft"] #name-app { height:100vh; height:100dvh; padding-top:calc(72 * var(--u)); display:grid; grid-template-rows:minmax(0,1fr) calc(48 * var(--u)); }
 body.is-name[data-view="craft"] .experiment-craft {
   width:min(100%,calc(1920 * var(--u))); min-height:0; height:100%; margin:auto;
   padding:calc(16 * var(--u)) calc(96 * var(--u)) calc(12 * var(--u));

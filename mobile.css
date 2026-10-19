@@ -13,13 +13,13 @@
   :where(html.is-mobile-device) .mobile-orientation-gate h1 { margin:0; font:400 24px/1.5 'Songti SC','STSong',serif; letter-spacing:.15em; }
   :where(html.is-mobile-device) .mobile-orientation-gate p { margin:0; color:#9caaa0; font:13px/1.8 'Microsoft YaHei',sans-serif; }
   :where(html.is-mobile-device) .mobile-orientation-gate span { margin-top:34px; color:#626c65; font:9px/1.6 Arial,sans-serif; letter-spacing:.15em; }
-  :where(html.is-mobile-device) .has-mobile-book [data-page="home"] { height:100svh; min-height:0; overflow:hidden; }
-  :where(html.is-mobile-device) .home-film.is-mobile-cinema { height:100svh; }
-  :where(html.is-mobile-device) .home-film.is-mobile-cinema .stage { position:relative; height:100svh; overflow:hidden; }
+  :where(html.is-mobile-device) .has-mobile-book [data-page="home"] { height:100vh; height:100svh; min-height:0; overflow:hidden; }
+  :where(html.is-mobile-device) .home-film.is-mobile-cinema { height:100vh; height:100svh; }
+  :where(html.is-mobile-device) .home-film.is-mobile-cinema .stage { position:relative; height:100vh; height:100svh; overflow:hidden; }
   :where(html.is-mobile-device) .home-film.is-mobile-cinema .scene { position:absolute; inset:0; height:100%; min-height:0; visibility:hidden; opacity:0; pointer-events:none; background:transparent; }
   :where(html.is-mobile-device) .home-film.is-mobile-cinema .scene.is-book-current { visibility:visible; opacity:1; pointer-events:auto; }
   :where(html.is-mobile-device) .home-film.is-mobile-cinema .still { object-position:center; }
-  :where(html.is-mobile-device) .home-film.is-mobile-cinema .copy { top:16%; bottom:auto; left:6.5%; width:40%; max-height:calc(100svh - 116px); overflow-y:auto; scrollbar-width:none; overscroll-behavior:contain; opacity:1; transform:none; }
+  :where(html.is-mobile-device) .home-film.is-mobile-cinema .copy { top:16%; bottom:auto; left:6.5%; width:40%; max-height:calc(100vh - 116px); max-height:calc(100svh - 116px); overflow-y:auto; scrollbar-width:none; overscroll-behavior:contain; opacity:1; transform:none; }
   :where(html.is-mobile-device) .home-film.is-mobile-cinema .copy::-webkit-scrollbar { display:none; }
   :where(html.is-mobile-device) .home-film.is-mobile-cinema .rubbing-copy,:where(html.is-mobile-device) .home-film.is-mobile-cinema .hall-copy { left:61%; right:6%; width:auto; top:17%; }
   :where(html.is-mobile-device) .home-film.is-mobile-cinema h1 { font-size:clamp(75px,12vw,140px); }
@@ -59,11 +59,11 @@
   :where(html.is-mobile-device) body.home-film-active .brand small { display:none; }
   :where(html.is-mobile-device) body.home-film-active .header-side { display:flex; align-items:center; gap:18px; }
   :where(html.is-mobile-device) body.home-film-active .menu-button { display:block; width:44px; height:44px; }
-  :where(html.is-mobile-device) .has-mobile-book .works-page { height:100svh; min-height:0; overflow-x:hidden; overflow-y:auto; }
-  :where(html.is-mobile-device) .has-mobile-book .works-module--archive { position:relative; height:100svh; min-height:0; overflow:hidden; }
+  :where(html.is-mobile-device) .has-mobile-book .works-page { height:100vh; height:100svh; min-height:0; overflow-x:hidden; overflow-y:auto; }
+  :where(html.is-mobile-device) .has-mobile-book .works-module--archive { position:relative; height:100vh; height:100svh; min-height:0; overflow:hidden; }
   :where(html.is-mobile-device) .has-mobile-book .works-module--glyph { display:none; }
-  :where(html.is-mobile-device) .has-mobile-book .archive-scene { height:100svh; min-height:0; }
-  :where(html.is-mobile-device) .has-mobile-book .archive-scene__inner { top:50%; left:50%; width:min(100vw,177.68svh); height:min(56.282vw,100svh); transform:translate(-50%,-50%); }
+  :where(html.is-mobile-device) .has-mobile-book .archive-scene { height:100vh; height:100svh; min-height:0; }
+  :where(html.is-mobile-device) .has-mobile-book .archive-scene__inner { top:50%; left:50%; width:min(100vw,177.68vh); width:min(100vw,177.68svh); height:min(56.282vw,100vh); height:min(56.282vw,100svh); transform:translate(-50%,-50%); }
   :where(html.is-mobile-device) .has-mobile-book .archive-catalog .archive-object:nth-child(n) { margin-top:0!important; }
   :where(html.is-mobile-device) .has-mobile-book .archive-catalog .archive-object figure { height:100%!important; }
   :where(html.is-mobile-device) .has-mobile-book .archive-object--stele { top:31%; left:4.3%; width:8.3%; height:48%; }
@@ -87,11 +87,11 @@
   :where(html.is-mobile-device) .archive-motion-controls button { min-height:44px; padding:5px 0; color:#d5dbd1; border:0; border-bottom:1px solid #d5dbd14a; background:transparent; font:11px/1.5 'Microsoft YaHei',sans-serif; }
   :where(html.is-mobile-device) .archive-motion-controls button:disabled { opacity:.5; }
   :where(html.is-mobile-device) .mobile-works-next { position:absolute; z-index:25; right:28px; bottom:12px; min-height:44px; padding:8px 10px; color:#d8dcd3; background:none; border:0; font:12px/1.5 'Microsoft YaHei',sans-serif; }
-  :where(html.is-mobile-device) .has-mobile-book .name-gateway { min-height:100svh; }
-  :where(html.is-mobile-device) .has-mobile-book .name-gateway .name-entry { height:100svh; min-height:100svh; padding:0; }
+  :where(html.is-mobile-device) .has-mobile-book .name-gateway { min-height:100vh; min-height:100svh; }
+  :where(html.is-mobile-device) .has-mobile-book .name-gateway .name-entry { height:100vh; height:100svh; min-height:100vh; min-height:100svh; padding:0; }
   :where(html.is-mobile-device) .has-mobile-book .name-gateway .name-entry__image { height:100%; object-position:center; }
   :where(html.is-mobile-device) .has-mobile-book .name-gateway .name-entry::before { background:linear-gradient(90deg,#07080812 25%,#070808a8 55%,#070808ef 100%); }
-  :where(html.is-mobile-device) .has-mobile-book .name-gateway .name-entry__copy { position:absolute; top:60px; left:60%; right:7%; width:auto; margin:0; max-height:calc(100svh - 108px); overflow-y:auto; }
+  :where(html.is-mobile-device) .has-mobile-book .name-gateway .name-entry__copy { position:absolute; top:60px; left:60%; right:7%; width:auto; margin:0; max-height:calc(100vh - 108px); max-height:calc(100svh - 108px); overflow-y:auto; }
   :where(html.is-mobile-device) .has-mobile-book .name-gateway h1 { font-size:52px; }
   :where(html.is-mobile-device) .has-mobile-book .name-gateway .name-entry__line { font-size:15px; }
   :where(html.is-mobile-device) .has-mobile-book .name-gateway__enter { margin-top:16px; min-height:44px; font-size:13px; }

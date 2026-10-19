@@ -19,7 +19,7 @@ body.is-name:is([data-view="review"], [data-view="pick"], [data-view="craft"])::
 body.is-name[data-view="review"]::before { background-image: linear-gradient(90deg, rgba(8, 11, 13, 0.14), rgba(8, 11, 13, 0)), url("assets/name/scene/found-hall.png"); }
 body.is-name[data-view="pick"]::before { background-image: linear-gradient(rgba(6, 9, 9, 0.086), rgba(6, 9, 9, 0.125)), url("assets/name/scene/pick-table.png"); }
 body.is-name[data-view="craft"]::before { background-image: linear-gradient(90deg, rgba(8, 10, 9, 0.19), rgba(8, 10, 9, 0)), url("assets/name/scene/craft-table.png"); }
-body.is-name:is([data-view="review"], [data-view="pick"], [data-view="craft"]) .name-page { min-height: 100svh; }
+body.is-name:is([data-view="review"], [data-view="pick"], [data-view="craft"]) .name-page { min-height: 100vh; min-height: 100svh; }
 :where(body.is-name) .name-footer { min-height: 64px; border-color: rgba(228, 224, 209, 0.29); margin: 0 var(--pad); padding: 7px 0px; grid-template-columns: 1fr auto 1fr; color: rgb(224, 220, 209); }
 :where(body.is-name) .name-footer ol { gap: clamp(24px, 4vw, 70px); }
 :where(body.is-name) .name-footer li { font: 13px/1.5 var(--editorial-font); }
@@ -34,14 +34,14 @@ body.is-name:is([data-view="review"], [data-view="pick"], [data-view="craft"]) .
 :where(body.is-name) .scene-actions .name-primary:disabled { opacity: 1; color: rgb(196, 203, 194); border-color: rgba(174, 181, 172, 0.5); background: rgba(40, 48, 43, 0.8); box-shadow: none; }
 :where(body.is-name) .scene-actions .name-primary:focus-visible { outline: rgb(207, 114, 92) solid 3px; outline-offset: 5px; }
 :where(body.is-name) .scene-actions button:focus-visible { outline-color: rgb(237, 223, 181); }
-:where(body.is-name) .experiment-review, :where(body.is-name) .experiment-pick, :where(body.is-name) .experiment-craft { min-height: calc(-64px + 100svh); padding: 102px var(--pad) 12px; }
+:where(body.is-name) .experiment-review, :where(body.is-name) .experiment-pick, :where(body.is-name) .experiment-craft { min-height: calc(-64px + 100vh); min-height: calc(-64px + 100svh); padding: 102px var(--pad) 12px; }
 :where(body.is-name) .review-heading { display: flex; align-items: center; gap: 40px; }
 :where(body.is-name) .review-heading .name-kicker { color: rgb(225, 224, 213); letter-spacing: 0.12em; font: 14px var(--editorial-font); white-space: nowrap; }
 :where(body.is-name) .review-heading h1 { font: clamp(38px,5vw,80px)/1.2 var(--editorial-font); margin: 10px 0px; color: rgb(235, 231, 221); }
 :where(body.is-name) .review-heading > p:last-child { padding-left: 40px; border-left: 1px solid rgba(196, 193, 181, 0.404); color: rgb(222, 219, 209); font: 18px/1.7 var(--editorial-font); letter-spacing: 0.14em; }
 :where(body.is-name) .experiment-review { display: flex; flex-direction: column; }
 :where(body.is-name) .stone-gallery { flex: 1 1 0%; display: flex; justify-content: center; align-items: center; gap: clamp(16px, 3vw, 58px); padding: 12px 2% 20px; perspective: 1200px; }
-:where(body.is-name) .stone-specimen { --rx: 0deg; --ry: 0deg; position: relative; width: min(25vw, 36.018svh, 400px); max-width: calc((100% - (var(--count) - 1) * 3vw) / var(--count)); flex: 0 1 auto; text-align: center; outline-offset: 8px; }
+:where(body.is-name) .stone-specimen { --rx: 0deg; --ry: 0deg; position: relative; width: min(25vw, 36.018vh, 400px); width: min(25vw, 36.018svh, 400px); max-width: calc((100% - (var(--count) - 1) * 3vw) / var(--count)); flex: 0 1 auto; text-align: center; outline-offset: 8px; }
 :where(body.is-name) .stone-object { display: block; position: relative; width: 100%; aspect-ratio: 2 / 3; transform: translateY(0) rotateX(var(--rx)) rotateY(var(--ry)); transform-style: preserve-3d; filter: drop-shadow(rgba(8, 10, 11, 0.753) -15px 14px 7px); transition: transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.6s; }
 :where(body.is-name) .stone-specimen:is(:hover, :focus-visible) { z-index: 3; }
 :where(body.is-name) .stone-specimen:is(:hover, :focus-visible) .stone-object { transform: translateY(-12px) rotateX(var(--rx)) rotateY(var(--ry)) scale(1.025); filter: drop-shadow(rgba(8, 10, 11, 0.73) -20px 25px 12px); transition-duration: 0.28s; }
@@ -66,7 +66,7 @@ body.is-name:is([data-view="review"], [data-view="pick"], [data-view="craft"]) .
 :where(body.is-name) .name-letters button { font: 22px var(--editorial-font); width: 32px; min-width: 32px; position: relative; }
 :where(body.is-name) .name-letters button[aria-current] { color: rgb(223, 118, 93); }
 :where(body.is-name) .name-letters button[aria-current]::after { content: ""; position: absolute; height: 1px; width: 24px; background: rgb(210, 88, 65); bottom: 0px; left: 4px; }
-:where(body.is-name) .paper-gallery { flex: 1 1 0%; align-content: center; display: grid; grid-template-columns: repeat(3, minmax(0px, 1fr)); gap: 22px 32px; width: min(70vw, -510px + 150svh); max-width: 1050px; margin: 0px auto; }
+:where(body.is-name) .paper-gallery { flex: 1 1 0%; align-content: center; display: grid; grid-template-columns: repeat(3, minmax(0px, 1fr)); gap: 22px 32px; width: min(70vw, -510px + 150vh); width: min(70vw, -510px + 150svh); max-width: 1050px; margin: 0px auto; }
 :where(body.is-name) .paper-choice { display: block; min-width: 0px; filter: drop-shadow(rgba(0, 0, 0, 0.467) 0px 5px 3px); text-align: center; }
 :where(body.is-name) .paper-sheet { display: block; position: relative; aspect-ratio: 1 / 1; background: url("assets/name/materials/paper-raw.webp") center center / cover rgb(238, 230, 212); clip-path: var(--paper-edge); transition: transform 0.2s, filter 0.2s; }
 :where(body.is-name) .paper-sheet::after { content: ""; position: absolute; inset: 0px; box-shadow: rgb(242, 235, 217) 0px 0px 3px 2px inset; pointer-events: none; }
@@ -91,11 +91,11 @@ body.is-name:is([data-view="review"], [data-view="pick"], [data-view="craft"]) .
 :where(body.is-name) .material-option { min-width: 0px; display: flex; flex-direction: column; align-items: center; gap: 6px; position: relative; font: 12px/1.4 var(--editorial-font); color: rgb(232, 228, 216); }
 :where(body.is-name) .material-option::after { content: ""; position: absolute; width: 24px; height: 2px; bottom: -6px; left: 50%; transform: translateX(-50%); background: transparent; }
 :where(body.is-name) .material-option[aria-pressed="true"]::after { background: rgb(216, 91, 70); }
-:where(body.is-name) .material-option img { display: block; height: clamp(38px, 5.5svh, 62px); width: 100%; max-width: 66px; object-fit: cover; border: 1px solid rgba(232, 224, 198, 0.192); border-radius: 1px; }
+:where(body.is-name) .material-option img { display: block; height: clamp(38px, 5.5vh, 62px); height: clamp(38px, 5.5svh, 62px); width: 100%; max-width: 66px; object-fit: cover; border: 1px solid rgba(232, 224, 198, 0.192); border-radius: 1px; }
 :where(body.is-name) .material-option:hover img, :where(body.is-name) .material-option:hover .ink-swatch { filter: brightness(1.15); }
 :where(body.is-name) .material-group--paper .material-options { grid-template-columns: repeat(3, minmax(0px, 1fr)); gap: 13px 14px; }
-:where(body.is-name) .material-group--paper .material-option img { height: clamp(30px, 4.4svh, 45px); max-width: 72px; clip-path: var(--paper-edge); }
-:where(body.is-name) .ink-swatch { width: clamp(34px, 4.8svh, 50px); aspect-ratio: 1 / 1; border: 1px solid rgba(218, 210, 196, 0.48); border-radius: 50%; box-shadow: rgba(255, 255, 255, 0.125) 0px 2px 4px inset, rgba(0, 0, 0, 0.6) 0px 2px 4px; background: radial-gradient(at 65% 70%, rgb(56, 58, 54), rgb(17, 19, 17) 75%); }
+:where(body.is-name) .material-group--paper .material-option img { height: clamp(30px, 4.4vh, 45px); height: clamp(30px, 4.4svh, 45px); max-width: 72px; clip-path: var(--paper-edge); }
+:where(body.is-name) .ink-swatch { width: clamp(34px, 4.8vh, 50px); width: clamp(34px, 4.8svh, 50px); aspect-ratio: 1 / 1; border: 1px solid rgba(218, 210, 196, 0.48); border-radius: 50%; box-shadow: rgba(255, 255, 255, 0.125) 0px 2px 4px inset, rgba(0, 0, 0, 0.6) 0px 2px 4px; background: radial-gradient(at 65% 70%, rgb(56, 58, 54), rgb(17, 19, 17) 75%); }
 :where(body.is-name) .ink-swatch--cinnabar { background: radial-gradient(at 65% 70%, rgb(168, 75, 55), rgb(111, 36, 29) 90%); }
 :where(body.is-name) .ink-swatch--ochre { background: radial-gradient(at 65% 70%, rgb(174, 130, 81), rgb(119, 84, 52) 90%); }
 :where(body.is-name) .ink-swatch--graphite { background: radial-gradient(at 65% 70%, rgb(132, 138, 134), rgb(70, 78, 75) 90%); }
@@ -122,7 +122,7 @@ body.is-name:is([data-view="review"], [data-view="pick"], [data-view="craft"]) .
 :where(body.is-name) .finish-range input { appearance: none; display: block; width: 100%; height: 20px; margin: 3px 0px 0px; cursor: pointer; background: linear-gradient(to right,#d37b61 var(--value),#e6dec340 var(--value)) center/100% 2px no-repeat; border: 0px; border-radius: 0px; }
 :where(body.is-name) .finish-range input::-webkit-slider-thumb { appearance: none; width: 11px; height: 11px; border: 1px solid rgb(230, 218, 202); border-radius: 50%; background: rgb(220, 211, 194); box-shadow: rgba(0, 0, 0, 0.533) 0px 1px 5px; }
 :where(body.is-name) .finish-range input:focus-visible { outline: rgb(227, 211, 178) solid 1px; outline-offset: 4px; }
-:where(body.is-name) .craft-preview { place-self: center; margin: 0px; width: min(100%, -196.35px + 71.4svh); max-width: 530px; }
+:where(body.is-name) .craft-preview { place-self: center; margin: 0px; width: min(100%, -196.35px + 71.4vh); width: min(100%, -196.35px + 71.4svh); max-width: 530px; }
 :where(body.is-name) .poster-paper { filter: drop-shadow(rgba(0, 0, 0, 0.467) 4px 8px 5px); }
 :where(body.is-name) .poster-paper canvas { clip-path: var(--paper-edge); }
 :where(body.is-name) .craft-preview > p { display: flex; justify-content: center; gap: 8px; font: 11px/1.6 var(--editorial-font); margin: 9px 0px 0px; color: rgb(232, 225, 210); }
@@ -166,17 +166,17 @@ body.is-name[data-view="result"] .name-footer { border-color: rgb(49, 53, 47); c
 :where(body.is-name) .site-header, body.is-name .site-header { height: 70px; }
 :where(body.is-name) .experiment-review, :where(body.is-name) .experiment-pick, :where(body.is-name) .experiment-craft { padding-top: 83px; }
 :where(body.is-name) .pick-heading { top: 85px; }
-:where(body.is-name) .paper-gallery { width: min(47vw, -190px + 100svh); gap: 14px 28px; }
+:where(body.is-name) .paper-gallery { width: min(47vw, -190px + 100vh); width: min(47vw, -190px + 100svh); gap: 14px 28px; }
 :where(body.is-name) .material-group { padding-top: 8px; padding-bottom: 8px; }
 :where(body.is-name) .material-group--technique, :where(body.is-name) .material-group--carving, :where(body.is-name) .material-group--weather { padding-top: 1px; padding-bottom: 1px; }
 :where(body.is-name) .material-group--paper .material-options { gap: 10px; }
 :where(body.is-name) .craft-controls h1 { font-size: 30px; }
 :where(body.is-name) .craft-controls header { padding-bottom: 7px; }
-:where(body.is-name) .craft-preview { width: min(100%, -135.66px + 71.4svh); }
+:where(body.is-name) .craft-preview { width: min(100%, -135.66px + 71.4vh); width: min(100%, -135.66px + 71.4svh); }
 }
 @media (max-width: 1100px) {
 :where(body.is-name) .pick-heading { position: static; margin-bottom: 18px; }
-:where(body.is-name) .paper-gallery { width: min(68vw, -280px + 100svh); }
+:where(body.is-name) .paper-gallery { width: min(68vw, -280px + 100vh); width: min(68vw, -280px + 100svh); }
 :where(body.is-name) .experiment-craft { column-gap: 35px; grid-template-columns: 310px minmax(0px, 1fr); }
 :where(body.is-name) .name-result { grid-template-columns: minmax(0px, 1fr) minmax(280px, 36%); column-gap: 30px; }
 :where(body.is-name) .name-result__story { display: block; }
@@ -188,20 +188,20 @@ body.is-name[data-view="result"] .name-footer { border-color: rgb(49, 53, 47); c
 :where(html.is-mobile-device) :where(body.is-name) *, :where(html.is-mobile-device) :where(body.is-name) ::before, :where(html.is-mobile-device) :where(body.is-name) ::after { transition: none !important; scroll-behavior: auto !important; }
 }
 @media (max-height: 780px) and (min-width: 901px) {
-:where(body.is-name) .paper-gallery { width: min(47vw, -290px + 100svh); }
-:where(body.is-name) .craft-preview { width: min(100%, -181.356px + 71.4svh); }
+:where(body.is-name) .paper-gallery { width: min(47vw, -290px + 100vh); width: min(47vw, -290px + 100svh); }
+:where(body.is-name) .craft-preview { width: min(100%, -181.356px + 71.4vh); width: min(100%, -181.356px + 71.4svh); }
 }
 @media (min-width: 1101px) {
 :where(body.is-name) .experiment-pick { padding-top: 150px; }
 }
 @media (max-height: 780px) and (min-width: 901px) {
 :where(body.is-name) .experiment-pick { padding-top: 142px; }
-:where(body.is-name) .paper-gallery { width: min(70vw, -486px + 150svh); gap: 14px 28px; }
+:where(body.is-name) .paper-gallery { width: min(70vw, -486px + 150vh); width: min(70vw, -486px + 150svh); gap: 14px 28px; }
 :where(body.is-name) .material-group--pressure, :where(body.is-name) .material-group--weather { padding-top: 5px; padding-bottom: 5px; }
 :where(body.is-name) .craft-controls header h1 { margin-bottom: 4px; }
 :where(body.is-name) .pressure-presets { margin-bottom: 3px; }
 :where(body.is-name) .pressure-presets button { min-height: 26px; }
-:where(body.is-name) .stone-specimen { width: min(25vw, 33.35svh); }
+:where(body.is-name) .stone-specimen { width: min(25vw, 33.35vh); width: min(25vw, 33.35svh); }
 :where(body.is-name) .material-group--stone .material-option img { height: 38px; }
 :where(body.is-name) .material-group--paper .material-option img { height: 30px; }
 }

@@ -5,9 +5,9 @@
 .detail-page:not([data-work="floral360"]) .floral-only { display: none; }
 .is-detail-scrolled .site-header { mix-blend-mode: normal; background: #070808f5; border-bottom: 1px solid #242826; }
 .feature-card picture { display: block; height: 100%; }
-.detail-page:is([data-work="stele360"], [data-work="fragment360"], [data-work="head360"], [data-work="dragon360"], [data-work="floral360"]) .detail-stage { min-height: calc(100svh - 54px); padding-top: 124px; padding-bottom: 64px; }
+.detail-page:is([data-work="stele360"], [data-work="fragment360"], [data-work="head360"], [data-work="dragon360"], [data-work="floral360"]) .detail-stage { min-height: calc(100vh - 54px); min-height: calc(100svh - 54px); padding-top: 124px; padding-bottom: 64px; }
 .detail-page:is([data-work="stele360"], [data-work="fragment360"], [data-work="head360"], [data-work="dragon360"], [data-work="floral360"]) .detail-glyph { opacity: .12; }
-.detail-page:is([data-work="stele360"], [data-work="fragment360"], [data-work="head360"], [data-work="dragon360"], [data-work="floral360"]) .detail__stone { width: min(45vw, 630px); height: max(480px, 70svh); mix-blend-mode: lighten; }
+.detail-page:is([data-work="stele360"], [data-work="fragment360"], [data-work="head360"], [data-work="dragon360"], [data-work="floral360"]) .detail__stone { width: min(45vw, 630px); height: max(480px, 70vh); height: max(480px, 70svh); mix-blend-mode: lighten; }
 .detail-page:is([data-work="stele360"], [data-work="fragment360"], [data-work="head360"], [data-work="dragon360"], [data-work="floral360"]) .detail__stone .surface-base { filter: grayscale(.85) brightness(.73) contrast(1.06); }
 .detail-page:is([data-work="stele360"], [data-work="fragment360"], [data-work="head360"], [data-work="dragon360"], [data-work="floral360"]) .detail__stone .surface-light { filter: grayscale(.8) brightness(1.12) contrast(1.1); }
 .detail-page:is([data-work="stele360"], [data-work="fragment360"], [data-work="head360"], [data-work="dragon360"], [data-work="floral360"]) .detail__stone[data-mode="trace"] .surface-base { filter: grayscale(1) brightness(.35) contrast(1.65); }
@@ -46,7 +46,7 @@
 .detail-study figcaption p { max-width: 220px; margin: 0; color: #777d78; font: 300 11px/1.9 "Songti SC", "STSong", serif; }
 .orbit-section { padding-top: 84px; padding-bottom: 54px; background: #090b0a; }
 .orbit-section .work-section-heading { margin-bottom: 18px; }
-.orbit-section .artifact-viewer { width: 100%; height: 72svh; min-height: 500px; max-height: 860px; touch-action: pan-y; cursor: auto; }
+.orbit-section .artifact-viewer { width: 100%; height: 72vh; height: 72svh; min-height: 500px; max-height: 860px; touch-action: pan-y; cursor: auto; }
 .orbit-section .artifact-viewer.is-active { touch-action: none; cursor: grab; }
 .orbit-section .artifact-viewer.is-active:active { cursor: grabbing; }
 .orbit-section .artifact-poster { opacity: .78; object-fit: contain; mix-blend-mode: lighten; padding-bottom: 38px; }
@@ -58,10 +58,10 @@
 .artifact-start svg { width: 19px; height: 19px; stroke-width: 1.4; }
 .artifact-start:hover { background: #232a23; border-color: #a4ad9d; }
 .artifact-viewer.is-active .artifact-start { display: none; }
-.orbit-section .artifact--webgl:fullscreen { height: 100svh; max-height: none; }
+.orbit-section .artifact--webgl:fullscreen { height: 100vh; height: 100svh; max-height: none; }
 .orbit-colophon { display: flex; justify-content: space-between; gap: 20px; padding-top: 24px; border-top: 1px solid var(--line); color: #777e76; font-size: 9px; line-height: 1.8; }
 .is-gallery-open { overflow: hidden; }
-.image-dialog { width: 100%; height: 100svh; max-width: none; max-height: none; margin: 0; padding: 0 32px 24px; border: 0; background: #070808; color: var(--bone); cursor: auto; letter-spacing: 0; }
+.image-dialog { width: 100%; height: 100vh; height: 100svh; max-width: none; max-height: none; margin: 0; padding: 0 32px 24px; border: 0; background: #070808; color: var(--bone); cursor: auto; letter-spacing: 0; }
 .image-dialog::backdrop { background: #070808; }
 .image-dialog[open] { display: grid; grid-template-rows: 80px minmax(0, 1fr); }
 .image-dialog header { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
@@ -82,7 +82,7 @@
   .detail-page:is([data-work="stele360"], [data-work="fragment360"], [data-work="head360"], [data-work="dragon360"], [data-work="floral360"]) .detail-meta { display: contents; }
   .detail-page:is([data-work="stele360"], [data-work="fragment360"], [data-work="head360"], [data-work="dragon360"], [data-work="floral360"]) .detail-meta .eyebrow { order: 1; }
   .detail-page:is([data-work="stele360"], [data-work="fragment360"], [data-work="head360"], [data-work="dragon360"], [data-work="floral360"]) .detail-meta h1 { order: 2; font-size: 40px; margin: 16px 0 0; }
-  .detail-page:is([data-work="stele360"], [data-work="fragment360"], [data-work="head360"], [data-work="dragon360"], [data-work="floral360"]) .detail__stone { order: 3; width: 100%; height: 53svh; min-height: 340px; max-height: 560px; margin: 20px 0 32px; }
+  .detail-page:is([data-work="stele360"], [data-work="fragment360"], [data-work="head360"], [data-work="dragon360"], [data-work="floral360"]) .detail__stone { order: 3; width: 100%; height: 53vh; height: 53svh; min-height: 340px; max-height: 560px; margin: 20px 0 32px; }
   .detail-page:is([data-work="stele360"], [data-work="fragment360"], [data-work="head360"], [data-work="dragon360"], [data-work="floral360"]) .detail-description { order: 4; margin: 0; }
   .detail-page:is([data-work="stele360"], [data-work="fragment360"], [data-work="head360"], [data-work="dragon360"], [data-work="floral360"]) .detail-meta dl { order: 5; width: 100%; margin: 28px 0; }
   .detail-page:is([data-work="stele360"], [data-work="fragment360"], [data-work="head360"], [data-work="dragon360"], [data-work="floral360"]) .view-modes { order: 6; margin-left: 10px; }
@@ -101,7 +101,7 @@
   .detail-study figcaption { gap: 16px; }
   .detail-study figcaption p { max-width: 180px; }
   .orbit-section .work-section-heading { flex-wrap: wrap; gap: 18px; }
-  .orbit-section .artifact-viewer { margin: 0; height: 62svh; min-height: 410px; max-height: 640px; }
+  .orbit-section .artifact-viewer { margin: 0; height: 62vh; height: 62svh; min-height: 410px; max-height: 640px; }
   .orbit-section .artifact-toolbar { bottom: 4px; gap: 2px; padding: 4px; }
   .orbit-section .artifact-toolbar button { width: 34px; height: 38px; flex-basis: 34px; }
   .orbit-section .artifact-toolbar > span { margin: 0 2px; }

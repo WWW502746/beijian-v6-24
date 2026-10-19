@@ -34,7 +34,7 @@ body.is-name[data-view="result"] .name-page.page--active { animation: none; }
 .name-result__print .name-print-actions { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; padding-top: 12px; }
 .name-print-actions [data-action="sources"] { border-bottom: 1px solid #ffffff21; padding: 6px 4px 18px; }
 .name-print-actions [data-action="download"] { justify-content: center; min-height: 44px; margin-top: 8px; color: #939393; font-size: 12px; }
-.name-source-dialog { width: min(920px, calc(100% - 32px)); max-height: 88svh; padding: 0; border-color: #c1c1c1; background: #e6e6e6; }
+.name-source-dialog { width: min(920px, calc(100% - 32px)); max-height: 88vh; max-height: 88svh; padding: 0; border-color: #c1c1c1; background: #e6e6e6; }
 .name-source-dialog > header { position: sticky; top: 0; z-index: 1; align-items: center; padding: 28px 36px 24px; border-bottom: 1px solid #b6b6b6; background: #e6e6e6; }
 .name-source-dialog > header .name-kicker { margin: 0 0 8px; color: #6f6f6f; }
 .name-source-dialog > header h2 { margin: 0; font-size: clamp(26px, 3vw, 36px); line-height: 1.4; text-wrap: balance; }
@@ -120,7 +120,7 @@ body.is-name[data-view="result"] .name-page.page--active { animation: none; }
   .name-glyph-card__source svg { width: 12px; height: 12px; }
   .name-trace-actions { flex-direction: column; align-items: start; gap: 6px; }
   .name-trace-actions .name-sources-cta { width: 100%; }
-  .name-source-dialog { width: calc(100% - 24px); max-height: 90svh; }
+  .name-source-dialog { width: calc(100% - 24px); max-height: 90vh; max-height: 90svh; }
   .name-source-dialog > header { padding: 20px 18px; gap: 12px; }
   .name-source-lead { margin: 20px 18px; }
   .name-source-list { padding: 0 18px; }

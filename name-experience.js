@@ -1,5 +1,5 @@
 import {styles, spectrum, hashText, readName, candidates, profileFor, validSession} from './name-core.js?v=xunzi20261015';
-import {finishOptions, defaultFinish, normalizeFinish, materialFiles, paintRubbing} from './name-finish.js?v=xunzi20261015';
+import {finishOptions, defaultFinish, normalizeFinish, materialFiles, paintRubbing} from './name-finish.js?v=compat20261019';
 import {mountResultFlip} from './name-result-flip.js?v=fullmotion20261019';
 
 const root = document.getElementById('name-app');

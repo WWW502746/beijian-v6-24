@@ -47,7 +47,7 @@ button:focus-visible, a:focus-visible { outline: 1px solid var(--bone); outline-
 .eyebrow, .section-index, .name-kicker { font: 400 12px/1.7 var(--reading-font); color: #b0b2ab; }
 .hero__copy > .eyebrow, .works-intro .eyebrow, .name-entry .name-kicker { padding-left: 16px; border-left: 2px solid var(--accent); }
 
-.hero { min-height: 620px; height: 86svh; max-height: 1100px; }
+.hero { min-height: 620px; height: 86vh; height: 86svh; max-height: 1100px; }
 .hero__copy { top: 29%; bottom: auto; width: 36%; }
 .hero h1 { display: block; font-size: 100px; line-height: 1.15; margin: 28px 0 26px; }
 .hero h1 span { animation: none; opacity: 1; transform: none; }
@@ -138,7 +138,7 @@ button:focus-visible, a:focus-visible { outline: 1px solid var(--bone); outline-
 .menu-drawer > p { font: 400 14px/1.9 var(--reading-font); }
 
 .name-page :is(h1,h2), .name-source-dialog :is(h2,h3) { font-family: var(--editorial-font); }
-.name-entry { min-height: 680px; height: 86svh; max-height: 1100px; padding: 146px var(--pad) 110px; }
+.name-entry { min-height: 680px; height: 86vh; height: 86svh; max-height: 1100px; padding: 146px var(--pad) 110px; }
 .name-entry__copy { width: min(500px,44%); margin-left: 0; }
 .name-entry h1 { font-size: 86px; margin: 26px 0 22px; }
 .name-entry__line { font: 400 22px/1.8 var(--editorial-font); }
@@ -169,7 +169,7 @@ button:focus-visible, a:focus-visible { outline: 1px solid var(--bone); outline-
   :root { --pad: 24px; }
   .site-header, body.is-name .site-header { height: 72px; }
   .brand > span { font-size: 26px; }
-  .hero { height: 86svh; min-height: 590px; }
+  .hero { height: 86vh; height: 86svh; min-height: 590px; }
   .hero__copy { top: 29%; width: 70%; }
   .hero h1 { font-size: 78px; }
   .hero__note { font-size: 20px; }
@@ -216,7 +216,7 @@ button:focus-visible, a:focus-visible { outline: 1px solid var(--bone); outline-
   .work-section-heading h2 { font-size: 26px; }
   .work-section-heading { flex-direction: column; gap: 22px; }
   .about-panel h2 { font-size: 34px; }
-  .name-entry { padding-top: 240px; padding-bottom: 104px; min-height: max(740px,92svh); }
+  .name-entry { padding-top: 240px; padding-bottom: 104px; min-height: max(740px,92vh); min-height: max(740px,92svh); }
   .name-entry::before { background: linear-gradient(0deg,#070808 35%,rgba(7,8,8,.84) 58%,rgba(7,8,8,.08) 92%),linear-gradient(90deg,rgba(7,8,8,.45),transparent); }
   .name-entry__copy { width: 100%; }
   .name-entry h1 { font-size: 64px; margin-top: 22px; }
