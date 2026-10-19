@@ -234,7 +234,7 @@
   function section(index) {
     if (!mainRoute() || window.pageMotion.busy || activeRoute()!=='home') return;
     if (index >= sections.length) { showPage('works'); return; }
-    if (index >= 0) window.homeFilm?.goTo(index, reduce() ? 'instant' : 'smooth');
+    if (index >= 0) window.homeFilm?.goTo(index);
   }
   function step(direction) {
     if (!mainRoute()) return;

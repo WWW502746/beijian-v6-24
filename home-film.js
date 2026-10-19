@@ -19,6 +19,7 @@
   let trigger, active = false, resizeProgress = null, endSince = null;
   let prepared = !window.sitePreload?.required;
   let warming = false;
+  let motionOptIn = false, switchingMotion = false;
   const ramp = (value, start, end) => Math.max(0, Math.min(1, (value - start) / (end - start)));
 
   // Keep one seek per clip in flight; decoding follows the latest scroll position.
@@ -112,7 +113,7 @@
     clip.video.load();
     Object.assign(clip, {started: false, ready: false, failed: false, framePlayer: null, frameTask: null, stream: null});
   }
-  function goTo(index, behavior = 'smooth') {
+  function goTo(index, behavior = reduced.matches && !motionOptIn ? 'instant' : 'smooth') {
     resizeProgress = null;
     if (trigger) window.scrollTo({ top: trigger.start + index / 2 * (trigger.end - trigger.start), behavior });
     else scenes[index].scrollIntoView({ behavior: reduced.matches ? 'instant' : behavior });
@@ -120,11 +121,12 @@
   window.homeFilm = {
     goTo,
     async prepare() {
-      if (!trigger) return;
+      if (!trigger && !switchingMotion) return;
       prepared = true;
       warming = true;
       clips.filter(clip => clip.failed || clip.video.error).forEach(resetClip);
       clips.forEach(prepareClip);
+      if (!trigger) clips.forEach(seekLatest);
       render();
       const started = performance.now();
       let frameDeadline;
@@ -159,7 +161,7 @@
     event.preventDefault();
     const index = Number(link.dataset.stop);
     history.replaceState(null, '', index ? `#${scenes[index].id}` : '#home');
-    goTo(index, reduced.matches ? 'instant' : 'smooth');
+    goTo(index);
   }));
   document.querySelector('.clean-toggle').addEventListener('click', event => {
     const clean = document.body.classList.toggle('is-film-clean');
@@ -168,7 +170,8 @@
     button.querySelector('span').textContent = clean ? '显示文字' : '纯画面';
     button.title = clean ? '显示页面文字' : '隐藏文字，只看画面';
   });
-  if (window.gsap && window.ScrollTrigger && window.pageMotion?.enabled && !reduced.matches) {
+  function createTrigger() {
+    if (trigger) return;
     gsap.registerPlugin(ScrollTrigger);
     film.classList.add('is-enhanced');
     trigger = gsap.to(playhead, {
@@ -176,17 +179,62 @@
       scrollTrigger: {
         trigger: film, start: 'top top', end: 'bottom bottom', scrub: .25,
         onRefresh(self) {
-          if (!active || resizeProgress === null) return;
-          const saved = resizeProgress; resizeProgress = null;
-          window.scrollTo({ top: self.start + saved * (self.end - self.start), behavior: 'instant' });
+          if (active && resizeProgress !== null) {
+            const saved = resizeProgress; resizeProgress = null;
+            window.scrollTo({ top: self.start + saved * (self.end - self.start), behavior: 'instant' });
+          }
+          requestAnimationFrame(render);
         }
       }
     }).scrollTrigger;
     trigger.disable(false);
-    window.addEventListener('resize', () => {
-      if (active && resizeProgress === null) resizeProgress = trigger.progress;
-    });
     render();
+  }
+  window.addEventListener('resize', () => {
+    if (active && trigger && resizeProgress === null) resizeProgress = trigger.progress;
+  });
+  if (window.gsap && window.ScrollTrigger && window.pageMotion?.enabled && !reduced.matches) createTrigger();
+  if (!trigger && window.gsap && window.ScrollTrigger && matchMedia('(min-width:801px)').matches) {
+    const toggle = document.createElement('button');
+    toggle.className = 'film-motion-toggle'; toggle.type = 'button';
+    toggle.textContent = '开启过场动画'; toggle.setAttribute('aria-pressed', 'false');
+    film.append(toggle);
+    toggle.onclick = async () => {
+      if (switchingMotion) return;
+      let index = window.homeFilm.index;
+      if (trigger) {
+        const animation = trigger.animation;
+        trigger.kill(); animation.kill(); trigger = null;
+        motionOptIn = false; resizeProgress = null; playhead.progress = 0; endSince = null;
+        film.classList.remove('is-enhanced');
+        images.forEach(image => image.style.removeProperty('opacity'));
+        copies.forEach(copy => { copy.style.removeProperty('opacity'); copy.style.removeProperty('transform'); });
+        shades.forEach(shade => shade.style.removeProperty('opacity'));
+        scenes.forEach(scene => { scene.inert = false; });
+        clips.forEach(clip => { clip.video.style.opacity = '0'; clip.framePlayer?.suspend(); });
+        status.textContent = ''; toggle.textContent = '开启过场动画'; toggle.setAttribute('aria-pressed', 'false');
+        ScrollTrigger.refresh(); goTo(index, 'instant');
+        return;
+      }
+      switchingMotion = true; motionOptIn = true;
+      toggle.disabled = true; toggle.textContent = '正在准备过场…';
+      status.textContent = '正在准备过场，准备好后保留当前章节。';
+      try {
+        await window.homeFilm.prepare();
+        if (active) index = window.homeFilm.index;
+        createTrigger();
+        if (active) {
+          trigger.enable(false, false); ScrollTrigger.refresh();
+          goTo(index, 'instant'); trigger.animation.progress(index / 2);
+        } else resizeProgress = index / 2;
+        toggle.textContent = '关闭过场动画'; toggle.setAttribute('aria-pressed', 'true');
+        status.textContent = '';
+      } catch (error) {
+        motionOptIn = false;
+        toggle.textContent = '重试开启过场';
+        status.textContent = '过场暂未准备完成，可以继续阅读或重试开启。';
+      } finally { switchingMotion = false; toggle.disabled = false; }
+    };
   }
   clips.forEach(clip => {
     ['loadeddata', 'canplay'].forEach(event => clip.video.addEventListener(event, () => { clip.ready = true; render(); }));
